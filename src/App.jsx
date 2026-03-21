@@ -10,6 +10,8 @@ import Edjucation from "./componenets/sections/Edjucation"
 import StarCanvas from "../src/canvas/Stars";
 import Projects from "./componenets/sections/Projects"
 import Contact from "./componenets/sections/Contact"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -53,6 +55,7 @@ function App() {
       <Edjucation/>
       </Wrapper>
       <Contact/>
+      <ToastContainer position="bottom-right" theme="dark" />
       </div>
       <Footer/>
     </Body>
