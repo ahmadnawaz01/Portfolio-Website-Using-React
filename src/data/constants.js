@@ -20,19 +20,25 @@ import dpsimg from "../images/dps.jpg";
 import kipsimg from "../images/kips.png";
 import ucpimg from "../images/ucp.png";
 import clangimg from "../images/c.png";
+import jupyterimg from "../images/jupyter.png";
+import matplot from "../images/matplot.png";
+import numpy from "../images/numpy.png";
+import pandas from "../images/pandas.png";
+import seaborn from "../images/seaborn.png";
+import sklearn from "../images/sklearn.png";
+import streamlit from "../images/streamlit.png";
 
 
 
 export const Bio = {
   name: "Ahmad Nawaz",
   roles: [
-    "MERN Stack Developer",
-    "Aspiring AI Engineer",
+    "AI/ML Engineer",
     "Programmer",
   ],
   skilldur: "Technologies I work with",
   description:
-    "6th semester Computer Science student with strong foundations in C++ and Data Structures & Algorithms. I build responsive and scalable full-stack web applications using the MERN stack and also work on problem-solving challenges on LeetCode. Currently expanding my skills in Python and exploring AI/ML. Actively seeking internships to apply my knowledge and grow professionally.",
+    "Aspiring Machine Learning Engineer and Computer Science student at UCP. Skilled in Python, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, and Streamlit, with a strong foundation in Data Structures & Algorithms (C++). Experienced in frontend development with React and passionate about building AI/ML solutions to real-world problems. Currently seeking AI/ML internship opportunities.",
   github: "https://github.com/ahmadnawaz01",
   resume:
     "https://drive.google.com/file/d/1txFKZD3LNIXMc329jD9c995AU8LItOXK/view",
@@ -45,6 +51,41 @@ export const Bio = {
 };
 
 export const skills = [
+  {
+    title: "Machine Learning",
+    skills: [
+      {
+        name: "Jupyter Notebook",
+        image:
+          jupyterimg,
+      },
+      {
+        name: "Matplotlib",
+        image:
+          matplot,
+      },
+      {
+        name: "NumPy",
+        image:
+          numpy,
+      },
+      {
+        name: "Pandas",
+        image:
+          pandas,
+      },
+      {
+        name: "Seaborn",
+        image:
+          seaborn,
+      },
+      {
+        name: "Scikit-learn",
+        image:
+          sklearn,
+      },
+    ],
+  },
   {
     title: "Frontend",
     skills: [
@@ -62,9 +103,8 @@ export const skills = [
           reactimg,
       },
       {
-        name: "Next Js",
-        image:
-          nextjsimg,
+        name: 'Streamlit',
+        image: streamlit,
       },
       {
         name: "JavaScript",
@@ -85,14 +125,6 @@ export const skills = [
   {
     title: "Backend",
     skills: [
-      {
-        name: "Node Js",
-        image: nodejsimg,
-      },
-      {
-        name: "Express Js",
-        image: expressjsimg,
-      },
       {
         name: "MySQL",
         image:
@@ -127,16 +159,15 @@ export const skills = [
         image:
           pythonimg,
       },
-      {
-        name: "C",
-        image:
-          clangimg,
-      },
     ],
   },
   {
     title: "Tools",
     skills: [
+      {
+        name: "Jupyter Notebook",
+        image: jupyterimg,
+      },
       {
         name: "Git",
         image:
@@ -165,16 +196,19 @@ export const experiences = [
   {
     id: 0,
     img: ucpimg,
-    role: "Computer Science Student & Developer",
+    role: "Aspiring Machine Learning Engineer",
     company: "University of Central Punjab, Lahore",
     date: "Oct 2023 - Present",
-    desc: "Currently in 6th semester, building web and mobile apps using MERN Stack and Flutter. Exploring Python and Machine Learning through hands-on projects. Strong foundation in Data Structures, Algorithms, Databases, and Operating Systems.",
+    desc: "6th semester Computer Science student focused on AI/ML. Skilled in Python, NumPy, Pandas, Scikit-learn, and Streamlit, with a strong foundation in C++ and DSA. Passionate about building real-world machine learning solutions.",
     skills: [
-      "MERN Stack",
-      "Flutter",
       "Python",
-      "Data Structures & Algorithms",
-      "Machine Learning (Beginner)"
+      "Machine Learning",
+      "NumPy",
+      "Pandas",
+      "Scikit-learn",
+      "Streamlit",
+      "C++",
+      "DSA"
     ],
     doc: "",
   },
@@ -209,224 +243,70 @@ export const education = [
     degree: "Matriculation (Science)",
   },
 ];
-
 export const projects = [
   {
-    id: 11,
-    title: "DecisionHub",
-    date: "Jan 2024 - Dec 2023",
+  id: 8, 
+  title: "Email/SMS Spam Classifier",
+  date: "May 2026",
+  description:
+    "An end-to-end Machine Learning pipeline designed to classify messages as either 'Spam' or 'Ham'. It features a comprehensive lifecycle from custom text preprocessing and model evaluation to a live interactive web deployment.",
+  image:
+    "https://raw.githubusercontent.com/ahmadnawaz01/SMS-Span-Classifier---Machine-Learning-Project---Scklearn---Streamlit/main/sms.spam.classifier.png",
+  tags: ["Python", "Scikit-Learn", "Streamlit", "NLTK", "Machine Learning"],
+  category: "machine learning",
+  github: "https://github.com/ahmadnawaz01/SMS-Span-Classifier---Machine-Learning-Project---Scklearn---Streamlit",
+  webapp: "https://sms-span-classifier---machine-learning-project---scklearn---ap.streamlit.app/",
+},
+{
+  id: 6,
+    title: "Personal Portfolio",
+    date: "Jun 2026",
     description:
-      "A Rule Builder application “Decision Hub” that empowers Business Analysts to create, save, and visualize decision strategies. Provide a no-code rule writing experience and visual representation to test these rules in real-time and observe the calculations at each step.",
+      "An interactive personal developer portfolio featuring advanced UI micro-animations, custom particle canvas effects, a sleek vertical timeline, and direct EmailJS contact integration.",
     image:
-      "https://github.com/rishavchanda/DecisionHub/raw/master/assets/testRule.jpg",
-    tags: [
-      "React Js",
-      "PostgressSQL",
-      "Node Js",
-      "Express Js",
-      "Redux",
-      "React Flow",
-    ],
+      "https://github.com/ahmadnawaz01/Portfolio-Website-Using-React/raw/main/portfolio.png",
+    tags: ["React 19", "Vite", "Framer Motion", "Tailwind v4", "MUI"],
     category: "web app",
-    github: "https://github.com/rishavchanda/DecisionHub",
-    webapp: "https://decisionhub.netlify.app/",
+    github: "https://github.com/ahmadnawaz01/Portfolio-Website-Using-React",
+    webapp: "https://ahmadnawazportfolio.netlify.app/",
   },
   {
-    id: 9,
-    title: "Trackify",
-    date: "Jun 2023 - Jul 2023",
+    id: 7, 
+    title: "EventPass",
+    date: "Jun 2026",
     description:
-      "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
+      "A cross-platform Flutter mobile application featuring robust Firebase authentication, secure role-based admin controls, and integrated Stripe test-mode payments for seamless ticket checkout.",
     image:
-      "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
-    tags: [
-      "Docker",
-      "AWS",
-      "DuckDNS",
-      "Eslint",
-      "Husky",
-      "CI/CD",
-      "React Js",
-      "MongoDb",
-      "Node Js",
-      "Express Js",
-      "Redux",
-    ],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Trackify",
-    webapp: "https://trackify-management.netlify.app/",
-  },
-  {
-    id: 0,
-    title: "Podstream",
-    date: "Apr 2023 - May 2023",
-    description:
-      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
-    image:
-      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
-    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Podstream",
-    webapp: "https://podstream.netlify.app/",
-    member: [
-      {
-        name: "Rishav Chanda",
-        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-        github: "https://github.com/rishavchanda/",
-      },
-      {
-        name: "Upasana Chaudhuri",
-        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-        github: "https://github.com/upasana0710",
-      },
-    ],
+      "https://github.com/ahmadnawaz01/MAD-Project_02-Flutter-Event_Booking_App/raw/main/Screenshot_20260601_021538_com.example.event_booking_app.jpg.jpeg",
+    tags: ["Flutter", "Dart", "Firebase", "Stripe API"],
+    category: "android app",
+    github: "https://github.com/ahmadnawaz01/MAD-Project_02-Flutter-Event_Booking_App",
+    webapp: "https://github.com/ahmadnawaz01/MAD-Project_02-Flutter-Event_Booking_App",
   },
   {
     id: 1,
-    title: "Vexa",
-    date: "Oct 2022 - Jan 2023",
+    title: "SwiftKeys",
+    date: "Jan 2026",
     description:
-      "Designed and developed the Vexa project, a project management app that helps users and teams stay organized and on track. Implemented key features such as task tracking, team collaboration, and time tracking to improve productivity and project outcomes and also invite team/project members. The plan is to add a community of users where they can find developers and other team members and chat system implementation.",
+    "A highly responsive peer-to-peer car rental UI showcase featuring a sleek public storefront and an isolated, comprehensive dashboard layout for vehicle fleet management.",
     image:
-      "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
-    tags: [
-      "React Js",
-      "MongoDb",
-      "Node Js",
-      "Express Js",
-      "Redux",
-      "NodeMailer",
-    ],
+      "https://github.com/ahmadnawaz01/SwiftKeys-rental-car-booking-site-Project/raw/main/2.png",
+    tags: ["React 19", "Vite 8", "Tailwind CSS v4", "React Router v7"],
     category: "web app",
-    github: "https://github.com/rishavchanda/Project-Management-App",
-    webapp: "https://vexa-app.netlify.app/",
+    github: "https://github.com/ahmadnawaz01/SwiftKeys-rental-car-booking-site-Project",
+    webapp: "https://swiftkeeys.netlify.app/",
   },
   {
-    id: 2,
-    title: "Brain Tumor Detection",
-    date: "Jan 2023 - Mar 2023",
+    id: 4, 
+    title: "PassOP",
+    date: "Aug 2025",
     description:
-      "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
+      "A lightweight, secure local password manager utilizing LocalStorage state persistence, unique UUID tracking for clean CRUD actions, and custom responsive layouts for mobile data tables.",
     image:
-      "https://github.com/rishavchanda/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
-    tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-    category: "machine learning",
-    github: "https://github.com/rishavchanda/Brain-Tumor-Detection",
-    webapp: "https://brain-tumor.netlify.app/",
-    member: [
-      {
-        name: "Rishav Chanda",
-        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-        github: "https://github.com/rishavchanda/",
-      },
-      {
-        name: "Upasana Chaudhuri",
-        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-        github: "https://github.com/upasana0710",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "Buckoid",
-    date: "Dec 2021 - Apr 2022",
-    description:
-      "App Is Currently In Playstore 100+ Downloads. This Project proposes an “Expense Tracking App”. Keep track of your personal expenses and compare them to your monthly income with the budget planner. It has Google Drive Cloud API for Backup of User Room Database. Made with Kotlin in MVVM Architecture & Live Data.",
-    image:
-      "https://camo.githubusercontent.com/3ad28aa710d18525f1fc87de056ed53c706d09979589bfd5a773df36653bad38/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
-    tags: ["Kotlin", "MVVM", "Room Database", "Google Drive Cloud API"],
-    category: "android app",
-    github: "https://github.com/rishavchanda/Buckoid-Android-App",
-    webapp: "https://play.google.com/store/apps/details?id=com.rishav.buckoid",
-  },
-  {
-    id: 10,
-    title: "Job Finding App",
-    date: "Jun 2023 - Jul 2023",
-    description:
-      "A Job Finding App made with React Native, Axios. Users can search for any job coming from API and apply there.",
-    image:
-      "https://user-images.githubusercontent.com/64485885/255237090-cf798a2c-1b41-4bb7-b904-b5353a1f08e8.png",
-    tags: ["React Native", "JavaScript", "Axios"],
-    category: "android app",
-    github: "https://github.com/rishavchanda/Job-finder-App",
-    webapp: "https://github.com/rishavchanda/Job-finder-App",
-  },
-  {
-    id: 4,
-    title: "Whatsapp Clone",
-    date: "Jul 2021",
-    description:
-      "A WhatsApp clone made with React JS, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/whatsapp-clone-rishav.appspot.com/o/Screenshot%20(151).png?alt=media&token=48391593-1ef0-4a8c-a92a-eb82bdf38e89",
-    tags: ["React Js", "Firebase", "Firestore", "Node JS"],
+      "https://github.com/ahmadnawaz01/-PassOP-Password-Manager-Using-React_Tailwindcss/raw/main/passop.png",
+    tags: ["React 19", "Vite", "Tailwind CSS", "UUID API"],
     category: "web app",
-    github: "https://github.com/rishavchanda/Whatsapp-Clone-React-Js",
-    webapp: "https://whatsapp-clone-rishav.web.app",
+    github: "https://github.com/ahmadnawaz01/-PassOP-Password-Manager-Using-React_Tailwindcss",
+    webapp: "https://passop-password-manager-using-react.netlify.app/",
   },
-  {
-    id: 5,
-    title: "Todo Web App",
-    date: "Jun 2021",
-    description:
-      " A Todo Web App made with React JS, Redux, and Material UI. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the tasks and can create a new task. It has a calendar where users can see all the tasks on a particular date. It has a search bar where users can search for a particular task.",
-    image:
-      "https://camo.githubusercontent.com/84ac6ab6f378348ef28d8184062b7e9e3511a1252ae3966eaa49e8e998f732a7/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746f646f2d6170702d63386331392e61707073706f742e636f6d2f6f2f53637265656e73686f74253230283938292e706e673f616c743d6d6564696126746f6b656e3d33643335646366322d626666322d343730382d393031632d343232383866383332386633",
-    tags: ["React Js", "Local Storage", "AWS Auth", "Node JS"],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Todo-Web-App",
-    webapp: "https://rishav-react-todo.netlify.app/",
-  },
-  {
-    id: 6,
-    title: "Breaking Bad",
-    date: "Jun 2021",
-    description:
-      "A simple react app that shows the characters of the famous TV series Breaking Bad. It uses the Breaking Bad API to fetch the data. It also has a search bar to search for a particular character.",
-    image:
-      "https://camo.githubusercontent.com/937774368308a82419f53dd6eeb4a8675780e119636488b4e3cfe5d34859a72a/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746f646f2d6170702d63386331392e61707073706f742e636f6d2f6f2f53637265656e73686f7425323028313534292e706e673f616c743d6d6564696126746f6b656e3d65613439383630632d303435362d343333342d616435372d336239346663303333363263",
-    tags: ["React Js", "API", "Axios", "Node JS"],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Breaking-Bad",
-    webapp: "https://breaking-bad-webapp.netlify.app",
-  },
-  {
-    id: 7,
-    title: "Quiz App",
-    date: "Dec 2020 - Jan 2021",
-    description:
-      "A android quiz app made with Java and Firebase. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the quiz categories and can create a new quiz. It has a leaderboard where users can see the top 10 scorers. It has a search bar where users can search for a particular quiz.",
-    image:
-      "https://github-production-user-asset-6210df.s3.amazonaws.com/64485885/239726262-c1b061d1-d9d0-42ef-9f1c-0412d14bc4f6.gif",
-    tags: ["Java", "Android Studio", "Firebase", "Google Auth"],
-    category: "android app",
-    github: "https://github.com/rishavchanda/Quiz-Earn",
-    webapp: "https://github.com/rishavchanda/Quiz-Earn",
-  },
-  {
-    id: 8,
-    title: "Face Recognition",
-    date: "Jan 2021",
-    description:
-      "A Face recognition python app made with OpenCV. It uses face_recognition library to detect faces. It uses the webcam to detect faces. It also has a search bar to search for a particular face.",
-    image:
-      "https://dontrepeatyourself.org/media/face-recognition-with-python-dlib-and-deep-learning_cezKZBj.png",
-    tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
-    category: "machine learning",
-    github: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
-    webapp: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
-  },
-];
-
-export const TimeLineData = [
-  { year: 2017, text: "Started my journey" },
-  { year: 2018, text: "Worked as a freelance developer" },
-  { year: 2019, text: "Founded JavaScript Mastery" },
-  { year: 2020, text: "Shared my projects with the world" },
-  { year: 2021, text: "Started my own platform" },
 ];

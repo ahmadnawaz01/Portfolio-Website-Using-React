@@ -91,7 +91,7 @@ const CardContainer = styled.div`
 `;
 
 const Projects = () => {
-  const [toggle, setToggle] = useState("all");
+  const [toggle, setToggle] = useState("machine learning");
   return (
     <Container id="Projects">
       <Wrapper>
@@ -101,16 +101,15 @@ const Projects = () => {
             marginBottom: "40px",
           }}
         >
-          I have worked on a wide range of projects. From web apps to android
-          apps. Here are some of my projects.
+          I have worked on a wide range of projects. Here are some of my projects.
         </Desc>
 
         <ToggleButtonGroup>
           <ToggleButton
-            active={toggle === "all"}
-            onClick={() => setToggle("all")}
+            active={toggle === "machine learning"}
+            onClick={() => setToggle("machine learning")}
           >
-            ALL
+            MACHINE LEARNING
           </ToggleButton>
           <Divider />
           <ToggleButton
@@ -125,13 +124,6 @@ const Projects = () => {
             onClick={() => setToggle("android app")}
           >
             ANDROID APP'S
-          </ToggleButton>
-          <Divider />
-          <ToggleButton
-            active={toggle === "machine learning"}
-            onClick={() => setToggle("machine learning")}
-          >
-            MACHINE LEARNING
           </ToggleButton>
         </ToggleButtonGroup>
 

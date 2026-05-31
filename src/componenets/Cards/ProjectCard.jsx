@@ -98,7 +98,9 @@ const Button = styled.a`
 const ProjectCard = ({ project }) => {
   return (
     <Card>
+      <a href={project.webapp} target="_blank" rel="noopener noreferrer">
       <Image src={project.image} />
+    </a>
       <Tags></Tags>
       <Details>
         <Title>{project.title}</Title>
