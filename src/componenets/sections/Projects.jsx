@@ -91,7 +91,7 @@ const CardContainer = styled.div`
 `;
 
 const Projects = () => {
-  const [toggle, setToggle] = useState("machine learning");
+  const [toggle, setToggle] = useState("all");
   return (
     <Container id="Projects">
       <Wrapper>
@@ -106,21 +106,28 @@ const Projects = () => {
 
         <ToggleButtonGroup>
           <ToggleButton
-            active={toggle === "machine learning"}
+            $active={toggle === "all"}
+            onClick={() => setToggle("all")}
+          >
+            ALL
+          </ToggleButton>
+          <Divider />
+          <ToggleButton
+            $active={toggle === "machine learning"}
             onClick={() => setToggle("machine learning")}
           >
             MACHINE LEARNING
           </ToggleButton>
           <Divider />
           <ToggleButton
-            active={toggle === "web app"}
+            $active={toggle === "web app"}
             onClick={() => setToggle("web app")}
           >
             WEB APP"S
           </ToggleButton>
           <Divider />
           <ToggleButton
-            active={toggle === "android app"}
+            $active={toggle === "android app"}
             onClick={() => setToggle("android app")}
           >
             ANDROID APP'S
@@ -129,11 +136,11 @@ const Projects = () => {
 
         <CardContainer>
           {toggle === "all" &&
-            projects.map((project) => <ProjectCard project={project} />)}
+            projects.map((project) => <ProjectCard key={project.id} project={project} />)}
           {projects
             .filter((item) => item.category === toggle)
             .map((project) => (
-              <ProjectCard project={project} />
+              <ProjectCard key={project.id} project={project} />
             ))}
         </CardContainer>
       </Wrapper>
