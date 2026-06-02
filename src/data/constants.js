@@ -27,6 +27,7 @@ import pandas from "../images/pandas.png";
 import seaborn from "../images/seaborn.png";
 import sklearn from "../images/sklearn.png";
 import streamlit from "../images/streamlit.png";
+import mv from "../images/mv.png";
 
 
 
@@ -249,7 +250,7 @@ export const projects = [
   "title": "Movie Recommender System",
   "date": "June 2026",
   "description": "An end-to-end Content-Based Recommendation Engine that calculates semantic vector distances across 5,000 titles. Implemented Joblib matrix compression to reduce storage footprints by 60%, bypassing cloud deployment limits. Features a clean, poster-first UI that streams real-time media via the TMDB API.",
-  "image": "https://github.com/ahmadnawaz01/Movie-Recomendation-System---Machine-Learning-Project/blob/main/movie_recommender.png",
+  "image": mv,
   "tags": ["Python", "Scikit-Learn", "Streamlit", "Joblib", "Machine Learning", "NLP"],
   "category": "machine learning",
   "github": "https://github.com/ahmadnawaz01/Movie-Recomendation-System---Machine-Learning-Project",
