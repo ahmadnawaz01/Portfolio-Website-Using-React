@@ -245,6 +245,17 @@ export const education = [
 ];
 export const projects = [
   {
+  "id": 9,
+  "title": "Movie Recommender System",
+  "date": "June 2026",
+  "description": "An end-to-end Content-Based Recommendation Engine that calculates semantic vector distances across 5,000 titles. Implemented Joblib matrix compression to reduce storage footprints by 60%, bypassing cloud deployment limits. Features a clean, poster-first UI that streams real-time media via the TMDB API.",
+  "image": "https://raw.githubusercontent.com/ahmadnawaz01/Movie-Recomendation-System---Machine-Learning-Project/main/movie_recommender.png",
+  "tags": ["Python", "Scikit-Learn", "Streamlit", "Joblib", "Machine Learning", "NLP"],
+  "category": "machine learning",
+  "github": "https://github.com/ahmadnawaz01/Movie-Recomendation-System---Machine-Learning-Project",
+  "webapp": "https://movie-recomendation-system---machine-learning-project-3shsnryt.streamlit.app/"
+},
+  {
   id: 8, 
   title: "Email/SMS Spam Classifier",
   date: "May 2026",
