@@ -28,7 +28,7 @@ import seaborn from "../images/seaborn.png";
 import sklearn from "../images/sklearn.png";
 import streamlit from "../images/streamlit.png";
 import mv from "../images/mv.png";
-
+import diabetes from "../images/dia.png";
 
 
 export const Bio = {
@@ -268,6 +268,17 @@ export const projects = [
   category: "machine learning",
   github: "https://github.com/ahmadnawaz01/SMS-Span-Classifier---Machine-Learning-Project---Scklearn---Streamlit",
   webapp: "https://sms-span-classifier---machine-learning-project---scklearn---ap.streamlit.app/",
+},
+{
+  "id": 10,
+  "title": "Diabetes Predictive System",
+  "date": "June 2026",
+  "description": "An end-to-end Machine Learning web application designed for early healthcare screening. Implemented a Support Vector Machine (SVM) classifier mapped to a robust data preprocessing pipeline using StandardScaler. Features a responsive, real-time diagnostic screening interface built with Streamlit.",
+  "image": diabetes,
+  "tags": ["Python", "Scikit-Learn", "Streamlit", "Machine Learning", "Data Science"],
+  "category": "machine learning",
+  "github": "https://github.com/ahmadnawaz01/Diabetes-Prediction-System---Scklearn---Streamlit",
+  "webapp": "https://diabetes-prediction-system---scklearn---app-8kpe99hnltcja7swdh.streamlit.app/"
 },
 {
   id: 6,
