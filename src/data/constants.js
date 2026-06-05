@@ -42,7 +42,7 @@ export const Bio = {
     "Aspiring Machine Learning Engineer and Computer Science student at UCP. Skilled in Python, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, and Streamlit, with a strong foundation in Data Structures & Algorithms (C++). Experienced in frontend development with React and passionate about building AI/ML solutions to real-world problems. Currently seeking AI/ML internship opportunities.",
   github: "https://github.com/ahmadnawaz01",
   resume:
-    "https://drive.google.com/file/d/1txFKZD3LNIXMc329jD9c995AU8LItOXK/view",
+    "https://drive.google.com/file/d/1xewBCg-QlC6l4xl-LzXLNsvCWLP2Bsga/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/YOUR-USERNAME",
   twitter: "",
   insta: "",
