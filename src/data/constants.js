@@ -43,9 +43,9 @@ export const Bio = {
   github: "https://github.com/ahmadnawaz01",
   resume:
     "https://drive.google.com/file/d/1xewBCg-QlC6l4xl-LzXLNsvCWLP2Bsga/view?usp=sharing",
-  linkedin: "https://www.linkedin.com/in/YOUR-USERNAME",
+  linkedin: "https://www.linkedin.com/in/ahmad-nawaz-0099cs/",
   twitter: "",
-  insta: "",
+  insta: "https://www.instagram.com/ahmadnawaz.21/",
   facebook: "",
   exp: "Currently Studing in BS Computer Science (6th Semester)",
   education: "Currently Studing In 6th Semester",
