@@ -29,6 +29,7 @@ import sklearn from "../images/sklearn.png";
 import streamlit from "../images/streamlit.png";
 import mv from "../images/mv.png";
 import diabetes from "../images/dia.png";
+import wh from "../images/wh.png";
 
 
 export const Bio = {
@@ -259,7 +260,7 @@ export const projects = [
   {
   id: 8, 
   title: "Email/SMS Spam Classifier",
-  date: "May 2026",
+  date: "June 2026",
   description:
     "An end-to-end Machine Learning pipeline designed to classify messages as either 'Spam' or 'Ham'. It features a comprehensive lifecycle from custom text preprocessing and model evaluation to a live interactive web deployment.",
   image:
@@ -281,9 +282,20 @@ export const projects = [
   "webapp": "https://diabetes-prediction-system---scklearn---app-8kpe99hnltcja7swdh.streamlit.app/"
 },
 {
+  "id": 2,
+  "title": "WhatsApp Chat Analyzer",
+  "date": "May 2026",
+  "description": "An end-to-end conversational analytics engine that transforms raw, unformatted chat exports into deep behavioral and linguistic insights. Features custom regex preprocessing pipelines, dynamic time-series feature extraction, advanced text-mining using Hinglish/English stop-word masks, and interactive 2D Seaborn heatmaps.",
+  "image": wh,
+  "tags": ["Python", "Pandas", "Matplotlib", "Seaborn", "Streamlit", "Data Visualization"],
+  "category": "data science",
+  "github": "https://github.com/ahmadnawaz01/whatsapp-chat-analyzer-_-Pandas_-matplotlib_streamlit",
+  "webapp": "https://whatsapp-chat-analyzer--pandas-matplotlibapp-xmsocw2qtupys2ddx.streamlit.app/"
+},
+{
   id: 6,
     title: "Personal Portfolio",
-    date: "Jun 2026",
+    date: "April 2026",
     description:
       "An interactive personal developer portfolio featuring advanced UI micro-animations, custom particle canvas effects, a sleek vertical timeline, and direct EmailJS contact integration.",
     image:
@@ -296,7 +308,7 @@ export const projects = [
   {
     id: 7, 
     title: "EventPass",
-    date: "Jun 2026",
+    date: "Oct 2025 - Nov 2025",
     description:
       "A cross-platform Flutter mobile application featuring robust Firebase authentication, secure role-based admin controls, and integrated Stripe test-mode payments for seamless ticket checkout.",
     image:
@@ -309,7 +321,7 @@ export const projects = [
   {
     id: 1,
     title: "SwiftKeys",
-    date: "Jan 2026",
+    date: "Jan 2026 - Feb 2026",
     description:
     "A highly responsive peer-to-peer car rental UI showcase featuring a sleek public storefront and an isolated, comprehensive dashboard layout for vehicle fleet management.",
     image:
