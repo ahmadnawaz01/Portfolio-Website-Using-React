@@ -247,6 +247,17 @@ export const education = [
 ];
 export const projects = [
   {
+  "id": 88,
+  "title": "Quora Duplicate Question Pairs Detector",
+  "date": "July 2026",
+  "description": "An end-to-end NLP application that predicts semantic equivalence between question pairs. Bypasses standard vectorization by engineering over 20 advanced domain-specific features—including token overlap metrics, length differences, and fuzzy string matching heuristics—to train a robust classification model.",
+  "image": "https://raw.githubusercontent.com/ahmadnawaz01/Quora-Duplicate-Questions-NLP/main/appscreenshotr.png",
+  "tags": ["Python", "Scikit-Learn", "Streamlit", "NLTK", "FuzzyWuzzy", "NLP"],
+  "category": "machine learning",
+  "github": "https://github.com/ahmadnawaz01/Quora-Duplicate-Questions-NLP",
+  "webapp": "https://quora-duplicate-questions-nlp.streamlit.app/"
+},
+  {
   "id": 9,
   "title": "Movie Recommender System",
   "date": "June 2026",
