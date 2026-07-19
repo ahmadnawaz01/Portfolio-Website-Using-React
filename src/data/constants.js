@@ -247,6 +247,25 @@ export const education = [
 ];
 export const projects = [
   {
+  "id": 9,
+  "title": "Sherlock-LSTM-Next-Word-Predictor",
+  "date": "July 2026",
+  "description": "Developed an auto-regressive predictive text engine using TensorFlow and Keras. Engineered an LSTM network with a 100-dimensional continuous embedding layer to process N-gram sequences and capture deep semantic context from the Sherlock Holmes corpus. Deployed the trained model as a real-time, interactive web application using Streamlit to simulate mobile keyboard autocompletion.",
+  "image": "https://github.com/ahmadnawaz01/Sherlock-LSTM-Next-Word-Predictor-NLP-Keras/blob/main/this.png",
+  "tags": [
+    "Python",
+    "TensorFlow",
+    "Keras",
+    "Streamlit",
+    "Deep Learning",
+    "NLP",
+    "LSTM"
+  ],
+  "category": "deep learning",
+  "github": "https://github.com/ahmadnawaz01/Sherlock-LSTM-Next-Word-Predictor-NLP-Keras",
+  "webapp": "https://sherlock-lstm-next-word-predictor-nlp-keras-hdr.streamlit.app/"
+},
+  {
   "id": 88,
   "title": "Quora Duplicate Question Pairs Detector",
   "date": "July 2026",
