@@ -113,6 +113,13 @@ const Projects = () => {
           </ToggleButton>
           <Divider />
           <ToggleButton
+            $active={toggle === "deep learning"}
+            onClick={() => setToggle("deep learning")}
+          >
+            DEEP LEARNING
+          </ToggleButton>
+          <Divider />
+          <ToggleButton
             $active={toggle === "machine learning"}
             onClick={() => setToggle("machine learning")}
           >
