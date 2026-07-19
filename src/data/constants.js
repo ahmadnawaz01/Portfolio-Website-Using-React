@@ -30,6 +30,7 @@ import streamlit from "../images/streamlit.png";
 import mv from "../images/mv.png";
 import diabetes from "../images/dia.png";
 import wh from "../images/wh.png";
+import thiss from "../images/this.png";
 
 
 export const Bio = {
@@ -251,7 +252,7 @@ export const projects = [
   "title": "Sherlock-LSTM-Next-Word-Predictor",
   "date": "July 2026",
   "description": "Developed an auto-regressive predictive text engine using TensorFlow and Keras. Engineered an LSTM network with a 100-dimensional continuous embedding layer to process N-gram sequences and capture deep semantic context from the Sherlock Holmes corpus. Deployed the trained model as a real-time, interactive web application using Streamlit to simulate mobile keyboard autocompletion.",
-  "image": "https://github.com/ahmadnawaz01/Sherlock-LSTM-Next-Word-Predictor-NLP-Keras/blob/main/this.png",
+  "image": "https://github.com/ahmadnawaz01/Sherlock-LSTM-Next-Word-Predictor-NLP-Keras/main/this.png",
   "tags": [
     "Python",
     "TensorFlow",
