@@ -10,6 +10,7 @@ import Edjucation from "./componenets/sections/Edjucation"
 import Projects from "./componenets/sections/Projects"
 import Contact from "./componenets/sections/Contact"
 import AdminPage from "./pages/AdminPage"
+import ProjectsPage from "./pages/ProjectsPage"
 import { DataProvider } from "./context/DataContext"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -65,6 +66,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<PortfolioHome />} />
+            <Route path="/projects" element={<ProjectsPage />} />
             <Route path="/admin" element={<AdminPage />} />
           </Routes>
           <ToastContainer position="bottom-right" theme="light" />

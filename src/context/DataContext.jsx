@@ -9,7 +9,7 @@ import {
 
 const DataContext = createContext();
 
-const STORAGE_KEY = 'portfolio_custom_data_v1';
+const STORAGE_KEY = 'portfolio_custom_data_v2';
 
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState(() => {

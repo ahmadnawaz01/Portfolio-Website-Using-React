@@ -162,12 +162,16 @@ const Contact = () => {
   const form = useRef();
   const handelSubmit = (e) => {
     e.preventDefault();
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || "s_6mjbzq9";
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "temple2r7i7";
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "IV7TvUQKqT4WI";
+
     emailjs
       .sendForm(
-        "service_6mjbzq9",
-        "template_ae2r7i7",
+        serviceId,
+        templateId,
         form.current,
-        "IV7TvUQKqT4WS5FpI"
+        publicKey
       )
       .then(
         (result) => {

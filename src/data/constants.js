@@ -90,18 +90,18 @@ export const skills = [
   {
     title: "Generative AI / Agentic AI",
     skills: [
-      { name: "LangChain", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-      { name: "LangGraph", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-      { name: "MCP (Model Context Protocol)", image: mcp },
-      { name: "RAG", image: rag },
-      { name: "ChromaDB", image: "https://raw.githubusercontent.com/chroma-core/chroma/main/docs/static/img/chroma.png" },
-      { name: "FAISS", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" }
+      { name: "LangChain", image: "https://raw.githubusercontent.com/langchain-ai/langchain/master/docs/static/img/langchain.png" },
+      { name: "LangGraph", image: "https://raw.githubusercontent.com/langchain-ai/langgraph/main/docs/static/img/langgraph.png" },
+      { name: "MCP (Model Context Protocol)", image: "https://raw.githubusercontent.com/modelcontextprotocol/specification/main/assets/mcp.svg" },
+      { name: "RAG", image: "https://cdn-icons-png.flaticon.com/512/8637/8637099.png" },
+      { name: "ChromaDB", image: "https://docs.trychroma.com/img/chroma.svg" },
+      { name: "FAISS", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/meta/meta-original.svg" }
     ],
   },
   {
     title: "Backend & Deployment",
     skills: [
-      { name: "MCP (Model Context Protocol)", image: mcp },
+      { name: "MCP (Model Context Protocol)", image: "https://raw.githubusercontent.com/modelcontextprotocol/specification/main/assets/mcp.svg" },
       { name: "FastAPI", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
       { name: "Docker", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
       { name: "REST APIs", image: "https://cdn-icons-png.flaticon.com/512/1006/1006771.png" },
@@ -122,7 +122,7 @@ export const skills = [
       { name: "MongoDB", image: mongodbimg },
       { name: "Firebase", image: firebaseimg },
       { name: "SQLite", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" },
-      { name: "Vector Databases", image: "https://raw.githubusercontent.com/chroma-core/chroma/main/docs/static/img/chroma.png" },
+      { name: "Vector Databases", image: "https://cdn-icons-png.flaticon.com/512/9850/9850812.png" },
     ],
   },
   {

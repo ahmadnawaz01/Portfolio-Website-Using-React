@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useData } from "../../context/DataContext";
 import ProjectCard from "../Cards/ProjectCard";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-contnet: center;
+  justify-content: center;
   margin-top: 50px;
   padding: 0px 16px;
-  position: rlative;
+  position: relative;
   z-index: 1;
   align-items: center;
 `;
@@ -27,6 +28,7 @@ const Wrapper = styled.div`
     flex-direction: column;
   }
 `;
+
 const Title = styled.div`
   font-family: 'Nunito', sans-serif;
   font-size: 52px;
@@ -51,55 +53,6 @@ const Desc = styled.div`
   }
 `;
 
-const ToggleButtonGroup = styled.div`
-  display: flex;
-  background: #F4F1FA;
-  box-shadow: inset 6px 6px 12px #cdc6d9, inset -6px -6px 12px #ffffff;
-  padding: 6px;
-  border-radius: 24px;
-  margin: 28px 0;
-  gap: 4px;
-  @media (max-width: 768px){
-    font-size: 12px;
-  }
-`;
-
-const ToggleButton = styled.div`
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  padding: 10px 22px;
-  border-radius: 18px;
-  cursor: pointer;
-  color: #635F69;
-  transition: all 0.2s ease-in-out;
-  
-  &:hover {
-    color: #DB2777;
-  }
-  
-  @media (max-width: 768px) {
-    padding: 8px 12px;
-    font-size: 12px;
-  }
-  
-  ${({ active }) =>
-    active &&
-    `
-    color: #FFFFFF !important;
-    background: linear-gradient(135deg, #F472B6 0%, #DB2777 100%);
-    box-shadow: 
-      6px 6px 14px #cdc6d9,
-      -6px -6px 14px #ffffff,
-      inset 2px 2px 4px rgba(255, 255, 255, 0.6),
-      inset -2px -2px 4px rgba(219, 39, 119, 0.3);
-  `}
-`;
-const Divider = styled.div`
-  width: 1.5px;
-  background: ${({ theme }) => theme.primary};
-`;
-
 const CardContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -108,39 +61,64 @@ const CardContainer = styled.div`
   flex-wrap: wrap;
 `;
 
+const ViewAllButton = styled(Link)`
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 17px;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #F472B6 0%, #DB2777 100%);
+  padding: 14px 32px;
+  border-radius: 24px;
+  margin-top: 36px;
+  box-shadow: 
+    8px 8px 18px #cdc6d9,
+    -8px -8px 18px #ffffff,
+    inset 3px 3px 6px rgba(255, 255, 255, 0.5),
+    inset -3px -3px 6px rgba(219, 39, 119, 0.3);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 
+      12px 12px 24px #cdc6d9,
+      -12px -12px 24px #ffffff,
+      inset 3px 3px 6px rgba(255, 255, 255, 0.6),
+      inset -3px -3px 6px rgba(219, 39, 119, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+`;
+
 const Projects = () => {
   const { projects } = useData();
-  const [toggle, setToggle] = useState("all");
+  const displayedProjects = projects.slice(0, 6);
+
   return (
     <Container id="Projects">
       <Wrapper>
         <Title>Projects</Title>
         <Desc
           style={{
-            marginBottom: "40px",
+            marginBottom: "30px",
           }}
         >
-          I have worked on a wide range of projects. Here are some of my projects.
+          I have worked on a wide range of projects. Here are some of my featured projects.
         </Desc>
 
-        <ToggleButtonGroup>
-          <ToggleButton
-            $active={toggle === "all"}
-            onClick={() => setToggle("all")}
-          >
-            Projects
-          </ToggleButton>
-        </ToggleButtonGroup>
-
         <CardContainer>
-          {toggle === "all" &&
-            projects.map((project) => <ProjectCard key={project.id} project={project} />)}
-          {projects
-            .filter((item) => item.category === toggle)
-            .map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
+          {displayedProjects.map((project) => (
+            <ProjectCard key={project.id || project.title} project={project} />
+          ))}
         </CardContainer>
+
+        <ViewAllButton to="/projects">
+          View All Projects ({projects.length}) →
+        </ViewAllButton>
       </Wrapper>
     </Container>
   );
