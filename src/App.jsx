@@ -1,14 +1,16 @@
 import styled, { ThemeProvider } from "styled-components"
-import {darkTheme} from "./utils/Themes"
+import { darkTheme } from "./utils/Themes"
 import Navbar from "./componenets/Navbar"
 import Footer from "./componenets/Footer"
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Hero from "./componenets/sections/Hero"
 import Skills from "./componenets/sections/Skills"
 import Experience from "./componenets/sections/Experience"
 import Edjucation from "./componenets/sections/Edjucation"
 import Projects from "./componenets/sections/Projects"
 import Contact from "./componenets/sections/Contact"
+import AdminPage from "./pages/AdminPage"
+import { DataProvider } from "./context/DataContext"
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -35,30 +37,41 @@ const Wrapper = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
 
-
-function App() {
-
-  return <ThemeProvider theme={darkTheme}>
-<BrowserRouter>
-    <Navbar/>
+const PortfolioHome = () => (
+  <>
+    <Navbar />
     <Body>
       <div>
-      <Hero/>
-      <Wrapper>
-      <Skills/>
-      <Experience/>
-      </Wrapper>
-      <Projects/>
-      <Wrapper>
-      <Edjucation/>
-      </Wrapper>
-      <Contact/>
-      <ToastContainer position="bottom-right" theme="dark" />
+        <Hero />
+        <Wrapper>
+          <Skills />
+          <Projects />
+        </Wrapper>
+        <Experience />
+        <Wrapper>
+          <Edjucation />
+        </Wrapper>
+        <Contact />
       </div>
-      <Footer/>
+      <Footer />
     </Body>
-</BrowserRouter>
-  </ThemeProvider>
+  </>
+);
+
+function App() {
+  return (
+    <ThemeProvider theme={darkTheme}>
+      <DataProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<PortfolioHome />} />
+            <Route path="/admin" element={<AdminPage />} />
+          </Routes>
+          <ToastContainer position="bottom-right" theme="light" />
+        </BrowserRouter>
+      </DataProvider>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;

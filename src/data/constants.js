@@ -31,166 +31,120 @@ import mv from "../images/mv.png";
 import diabetes from "../images/dia.png";
 import wh from "../images/wh.png";
 import thiss from "../images/this.png";
+import mcp from "../images/mcp.jfif"
+import rag from "../images/rag.jfif"
+import agpt from "../images/a gpt.png"
+
 
 
 export const Bio = {
   name: "Ahmad Nawaz",
+
   roles: [
-    "AI/ML Engineer",
-    "Programmer",
+    "Generative AI Engineer",
+    "Agentic AI Engineer",
+    "Machine Learning Engineer",
   ],
+
   skilldur: "Technologies I work with",
+
   description:
-    "Aspiring Machine Learning Engineer and Computer Science student at UCP. Skilled in Python, NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, and Streamlit, with a strong foundation in Data Structures & Algorithms (C++). Experienced in frontend development with React and passionate about building AI/ML solutions to real-world problems. Currently seeking AI/ML internship opportunities.",
+    "Computer Science student at UCP focused on Generative AI, Agentic AI, Machine Learning, and Deep Learning. Skilled in Python, PyTorch, TensorFlow, Scikit-learn, LangChain, LangGraph, MCP, RAG, FastAPI, and Docker. Experienced in building AI-powered applications and passionate about exploring LLMs, AI agents, and modern AI engineering.",
+
   github: "https://github.com/ahmadnawaz01",
+
   resume:
     "https://drive.google.com/file/d/1xewBCg-QlC6l4xl-LzXLNsvCWLP2Bsga/view?usp=sharing",
-  linkedin: "https://www.linkedin.com/in/ahmad-nawaz-0099cs/",
+
+  linkedin:
+    "https://www.linkedin.com/in/ahmad-nawaz-0099cs/",
+
   twitter: "",
-  insta: "https://www.instagram.com/ahmadnawaz.21/",
+
+  insta:
+    "https://www.instagram.com/ahmadnawaz.21/",
+
   facebook: "",
-  exp: "Currently Studing in BS Computer Science (6th Semester)",
-  education: "Currently Studing In 6th Semester",
+
+  exp: "Currently Studying BS Computer Science (6th Semester)",
+
+  education: "BS Computer Science — 6th Semester",
 };
 
 export const skills = [
   {
-    title: "Machine Learning",
+    title: "Machine Learning / Deep Learning",
     skills: [
-      {
-        name: "Jupyter Notebook",
-        image:
-          jupyterimg,
-      },
-      {
-        name: "Matplotlib",
-        image:
-          matplot,
-      },
-      {
-        name: "NumPy",
-        image:
-          numpy,
-      },
-      {
-        name: "Pandas",
-        image:
-          pandas,
-      },
-      {
-        name: "Seaborn",
-        image:
-          seaborn,
-      },
-      {
-        name: "Scikit-learn",
-        image:
-          sklearn,
-      },
+      { name: "Python", image: pythonimg },
+      { name: "NumPy", image: numpy },
+      { name: "Pandas", image: pandas },
+      { name: "Matplotlib", image: matplot },
+      { name: "Seaborn", image: seaborn },
+      { name: "Scikit-learn", image: sklearn },
+      { name: "Machine Learning", image: sklearn },
+
+      { name: "Keras", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" },
+      { name: "PyTorch", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" }
     ],
   },
   {
-    title: "Frontend",
+    title: "Generative AI / Agentic AI",
     skills: [
-      {
-        name: "HTML",
-        image: htmlimg,
-      },
-      {
-        name: "CSS",
-        image: cssimg,
-      },
-      {
-        name: "React Js",
-        image:
-          reactimg,
-      },
-      {
-        name: 'Streamlit',
-        image: streamlit,
-      },
-      {
-        name: "JavaScript",
-        image:
-          javascriptimg,
-      },
-      {
-        name: "TailWind CSS",
-        image: tailwindcss
-      },
-      {
-        name: "Flutter",
-        image:
-          flutterimg,
-      },
+      { name: "LangChain", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+      { name: "LangGraph", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+      { name: "MCP (Model Context Protocol)", image: mcp },
+      { name: "RAG", image: rag },
+      { name: "ChromaDB", image: "https://raw.githubusercontent.com/chroma-core/chroma/main/docs/static/img/chroma.png" },
+      { name: "FAISS", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg" }
     ],
   },
   {
-    title: "Backend",
+    title: "Backend & Deployment",
     skills: [
-      {
-        name: "MySQL",
-        image:
-          mysqlimg,
-      },
-      {
-        name: "MongoDB",
-        image:
-          mongodbimg,
-      },
-      {
-        name: "Firebase",
-        image: firebaseimg,
-      },
+      { name: "MCP (Model Context Protocol)", image: mcp },
+      { name: "FastAPI", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
+      { name: "Docker", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+      { name: "REST APIs", image: "https://cdn-icons-png.flaticon.com/512/1006/1006771.png" },
     ],
   },
   {
-    title: "Languages",
+    title: "Programming",
     skills: [
-      {
-        name: "c++",
-        image:
-          cplusimg,
-      },
-      {
-        name: "Javascript",
-        image:
-          javascriptimg,
-      },
-      {
-        name: "Python",
-        image:
-          pythonimg,
-      },
+      { name: "Python", image: pythonimg },
+      { name: "C++", image: cplusimg },
+      { name: "JavaScript", image: javascriptimg },
     ],
   },
   {
-    title: "Tools",
+    title: "Databases",
     skills: [
-      {
-        name: "Jupyter Notebook",
-        image: jupyterimg,
-      },
-      {
-        name: "Git",
-        image:
-          gitimg,
-      },
-      {
-        name: "GitHub",
-        image:
-          githubimg,
-      },
-      {
-        name: "VS Code",
-        image:
-          vscodeimg,
-      },
-      {
-        name: "Postman",
-        image:
-          postmanimg,
-      },
+      { name: "SQL", image: mysqlimg },
+      { name: "MongoDB", image: mongodbimg },
+      { name: "Firebase", image: firebaseimg },
+      { name: "SQLite", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" },
+      { name: "Vector Databases", image: "https://raw.githubusercontent.com/chroma-core/chroma/main/docs/static/img/chroma.png" },
+    ],
+  },
+  {
+    title: "Development Tools",
+    skills: [
+      { name: "Git", image: gitimg },
+      { name: "GitHub", image: githubimg },
+      { name: "VS Code", image: vscodeimg },
+      { name: "Jupyter Notebook", image: jupyterimg },
+      { name: "Postman", image: postmanimg },
+    ],
+  },
+  {
+    title: "Web / Mobile",
+    skills: [
+      { name: "React", image: reactimg },
+      { name: "Next.js", image: nextjsimg },
+      { name: "HTML", image: htmlimg },
+      { name: "CSS", image: cssimg },
+      { name: "Tailwind CSS", image: tailwindcss },
+      { name: "Flutter", image: flutterimg },
+      { name: "Streamlit", image: streamlit },
     ],
   },
 ];
@@ -248,83 +202,142 @@ export const education = [
 ];
 export const projects = [
   {
-  "id": 9,
-  "title": "Sherlock-LSTM-Next-Word-Predictor",
-  "date": "July 2026",
-  "description": "Developed an auto-regressive predictive text engine using TensorFlow and Keras. Engineered an LSTM network with a 100-dimensional continuous embedding layer to process N-gram sequences and capture deep semantic context from the Sherlock Holmes corpus. Deployed the trained model as a real-time, interactive web application using Streamlit to simulate mobile keyboard autocompletion.",
-  "image": thiss,
-  "tags": [
-    "Python",
-    "TensorFlow",
-    "Keras",
-    "Streamlit",
-    "Deep Learning",
-    "NLP",
-    "LSTM"
-  ],
-  "category": "deep learning",
-  "github": "https://github.com/ahmadnawaz01/Sherlock-LSTM-Next-Word-Predictor-NLP-Keras",
-  "webapp": "https://sherlock-lstm-next-word-predictor-nlp-keras-hdr.streamlit.app/"
-},
+    "id": 87,
+    "title": "A-GPT-Agentic-Chatbot",
+    "date": "August 2026",
+    "description": "Architected a full-stack, autonomous AI agent platform modeled after ChatGPT using LangGraph and Gemini 2.5. Implemented dynamic tool routing for real-time web search via Tavily API, document Q&A (RAG) using ChromaDB vector store, custom python calculation, and persistent long-term memory. Engineered an asynchronous FastAPI backend utilizing Server-Sent Events (SSE) for token-by-token streaming responses to a futuristic glassmorphic UI with speech-to-text dictation.",
+    "image": agpt,
+    "tags": [
+      "Python",
+      "LangGraph",
+      "FastAPI",
+      "ChromaDB",
+      "SQLAlchemy",
+      "LangSmith",
+      "RAG",
+      "Agentic AI"
+    ],
+    "category": "deep learning",
+    "github": "https://github.com/ahmadnawaz01/A-GPT-Agentic-Chatbot-with-Langgraph-LangSmith-FastApi-ChromaDB-SQLAlchemy",
+    "webapp": ""
+  },
   {
-  "id": 88,
-  "title": "Quora Duplicate Question Pairs Detector",
-  "date": "July 2026",
-  "description": "An end-to-end NLP application that predicts semantic equivalence between question pairs. Bypasses standard vectorization by engineering over 20 advanced domain-specific features—including token overlap metrics, length differences, and fuzzy string matching heuristics—to train a robust classification model.",
-  "image": "https://raw.githubusercontent.com/ahmadnawaz01/Quora-Duplicate-Questions-NLP/main/appscreenshotr.png",
-  "tags": ["Python", "Scikit-Learn", "Streamlit", "NLTK", "FuzzyWuzzy", "NLP"],
-  "category": "machine learning",
-  "github": "https://github.com/ahmadnawaz01/Quora-Duplicate-Questions-NLP",
-  "webapp": "https://quora-duplicate-questions-nlp.streamlit.app/"
-},
+    "id": 12,
+    "title": "YouTube-Video-RAG-Chatbot",
+    "date": "August 2026",
+    "description": "Engineered an interactive RAG chatbot converting YouTube video transcripts into searchable vector knowledge bases using LangChain (LCEL) and Streamlit. Implemented RecursiveCharacterTextSplitter with Google Gemini embeddings and an in-memory FAISS vector index for fast similarity search. Solved YouTube's data-center anti-bot rate-limiting policies by architecting residential endpoint routing for transcript extraction.",
+    "image": rag,
+    "tags": [
+      "Python",
+      "Streamlit",
+      "LangChain",
+      "FAISS",
+      "Google Gemini",
+      "RAG",
+      "Vector Search",
+      "NLP"
+    ],
+    "category": "deep learning",
+    "github": "https://github.com/ahmadnawaz01/Youtube_RAG_ChatBot-Using-Langchain---Youtube-Transcript-Api---Google-Gemini-Api",
+    "webapp": ""
+  },
   {
-  "id": 9,
-  "title": "Movie Recommender System",
-  "date": "June 2026",
-  "description": "An end-to-end Content-Based Recommendation Engine that calculates semantic vector distances across 5,000 titles. Implemented Joblib matrix compression to reduce storage footprints by 60%, bypassing cloud deployment limits. Features a clean, poster-first UI that streams real-time media via the TMDB API.",
-  "image": mv,
-  "tags": ["Python", "Scikit-Learn", "Streamlit", "Joblib", "Machine Learning", "NLP"],
-  "category": "machine learning",
-  "github": "https://github.com/ahmadnawaz01/Movie-Recomendation-System---Machine-Learning-Project",
-  "webapp": "https://movie-recomendation-system---machine-learning-project-3shsnryt.streamlit.app/"
-},
+    "id": 11,
+    "title": "Expense-Tracker-MCP-Server",
+    "date": "August 2026",
+    "description": "Developed an end-to-end Model Context Protocol (MCP) server using FastMCP and SQLite to manage and analyze personal expenses through natural language. Integrated tools for full CRUD operations, spending analytics, budget tracking, categorized summaries, and CSV exports. Enabled seamless remote and local connectivity with AI assistants like Claude Desktop via Server-Sent Events (SSE).",
+    "image": mcp,
+    "tags": [
+      "Python",
+      "FastMCP",
+      "SQLite",
+      "Model Context Protocol",
+      "Claude Desktop",
+      "SSE"
+    ],
+    "category": "deep learning",
+    "github": "https://github.com/ahmadnawaz01/expense-tracker-mcp-server",
+    "webapp": ""
+  },
   {
-  id: 8, 
-  title: "Email/SMS Spam Classifier",
-  date: "June 2026",
-  description:
-    "An end-to-end Machine Learning pipeline designed to classify messages as either 'Spam' or 'Ham'. It features a comprehensive lifecycle from custom text preprocessing and model evaluation to a live interactive web deployment.",
-  image:
-    "https://raw.githubusercontent.com/ahmadnawaz01/SMS-Span-Classifier---Machine-Learning-Project---Scklearn---Streamlit/main/sms.spam.classifier.png",
-  tags: ["Python", "Scikit-Learn", "Streamlit", "NLTK", "Machine Learning"],
-  category: "machine learning",
-  github: "https://github.com/ahmadnawaz01/SMS-Span-Classifier---Machine-Learning-Project---Scklearn---Streamlit",
-  webapp: "https://sms-span-classifier---machine-learning-project---scklearn---ap.streamlit.app/",
-},
-{
-  "id": 10,
-  "title": "Diabetes Predictive System",
-  "date": "June 2026",
-  "description": "An end-to-end Machine Learning web application designed for early healthcare screening. Implemented a Support Vector Machine (SVM) classifier mapped to a robust data preprocessing pipeline using StandardScaler. Features a responsive, real-time diagnostic screening interface built with Streamlit.",
-  "image": diabetes,
-  "tags": ["Python", "Scikit-Learn", "Streamlit", "Machine Learning", "Data Science"],
-  "category": "machine learning",
-  "github": "https://github.com/ahmadnawaz01/Diabetes-Prediction-System---Scklearn---Streamlit",
-  "webapp": "https://diabetes-prediction-system---scklearn---app-8kpe99hnltcja7swdh.streamlit.app/"
-},
-{
-  "id": 2,
-  "title": "WhatsApp Chat Analyzer",
-  "date": "May 2026",
-  "description": "An end-to-end conversational analytics engine that transforms raw, unformatted chat exports into deep behavioral and linguistic insights. Features custom regex preprocessing pipelines, dynamic time-series feature extraction, advanced text-mining using Hinglish/English stop-word masks, and interactive 2D Seaborn heatmaps.",
-  "image": wh,
-  "tags": ["Python", "Pandas", "Matplotlib", "Seaborn", "Streamlit", "Data Visualization"],
-  "category": "data science",
-  "github": "https://github.com/ahmadnawaz01/whatsapp-chat-analyzer-_-Pandas_-matplotlib_streamlit",
-  "webapp": "https://whatsapp-chat-analyzer--pandas-matplotlibapp-xmsocw2qtupys2ddx.streamlit.app/"
-},
-{
-  id: 6,
+    "id": 9,
+    "title": "Sherlock-LSTM-Next-Word-Predictor",
+    "date": "July 2026",
+    "description": "Developed an auto-regressive predictive text engine using TensorFlow and Keras. Engineered an LSTM network with a 100-dimensional continuous embedding layer to process N-gram sequences and capture deep semantic context from the Sherlock Holmes corpus. Deployed the trained model as a real-time, interactive web application using Streamlit to simulate mobile keyboard autocompletion.",
+    "image": thiss,
+    "tags": [
+      "Python",
+      "TensorFlow",
+      "Keras",
+      "Streamlit",
+      "Deep Learning",
+      "NLP",
+      "LSTM"
+    ],
+    "category": "deep learning",
+    "github": "https://github.com/ahmadnawaz01/Sherlock-LSTM-Next-Word-Predictor-NLP-Keras",
+    "webapp": "https://sherlock-lstm-next-word-predictor-nlp-keras-hdr.streamlit.app/"
+  },
+
+  {
+    "id": 88,
+    "title": "Quora Duplicate Question Pairs Detector",
+    "date": "July 2026",
+    "description": "An end-to-end NLP application that predicts semantic equivalence between question pairs. Bypasses standard vectorization by engineering over 20 advanced domain-specific features—including token overlap metrics, length differences, and fuzzy string matching heuristics—to train a robust classification model.",
+    "image": "https://raw.githubusercontent.com/ahmadnawaz01/Quora-Duplicate-Questions-NLP/main/appscreenshotr.png",
+    "tags": ["Python", "Scikit-Learn", "Streamlit", "NLTK", "FuzzyWuzzy", "NLP"],
+    "category": "machine learning",
+    "github": "https://github.com/ahmadnawaz01/Quora-Duplicate-Questions-NLP",
+    "webapp": "https://quora-duplicate-questions-nlp.streamlit.app/"
+  },
+  {
+    "id": 3,
+    "title": "Movie Recommender System",
+    "date": "June 2026",
+    "description": "An end-to-end Content-Based Recommendation Engine that calculates semantic vector distances across 5,000 titles. Implemented Joblib matrix compression to reduce storage footprints by 60%, bypassing cloud deployment limits. Features a clean, poster-first UI that streams real-time media via the TMDB API.",
+    "image": mv,
+    "tags": ["Python", "Scikit-Learn", "Streamlit", "Joblib", "Machine Learning", "NLP"],
+    "category": "machine learning",
+    "github": "https://github.com/ahmadnawaz01/Movie-Recomendation-System---Machine-Learning-Project",
+    "webapp": "https://movie-recomendation-system---machine-learning-project-3shsnryt.streamlit.app/"
+  },
+  {
+    id: 8,
+    title: "Email/SMS Spam Classifier",
+    date: "June 2026",
+    description:
+      "An end-to-end Machine Learning pipeline designed to classify messages as either 'Spam' or 'Ham'. It features a comprehensive lifecycle from custom text preprocessing and model evaluation to a live interactive web deployment.",
+    image:
+      "https://raw.githubusercontent.com/ahmadnawaz01/SMS-Span-Classifier---Machine-Learning-Project---Scklearn---Streamlit/main/sms.spam.classifier.png",
+    tags: ["Python", "Scikit-Learn", "Streamlit", "NLTK", "Machine Learning"],
+    category: "machine learning",
+    github: "https://github.com/ahmadnawaz01/SMS-Span-Classifier---Machine-Learning-Project---Scklearn---Streamlit",
+    webapp: "https://sms-span-classifier---machine-learning-project---scklearn---ap.streamlit.app/",
+  },
+  {
+    "id": 10,
+    "title": "Diabetes Predictive System",
+    "date": "June 2026",
+    "description": "An end-to-end Machine Learning web application designed for early healthcare screening. Implemented a Support Vector Machine (SVM) classifier mapped to a robust data preprocessing pipeline using StandardScaler. Features a responsive, real-time diagnostic screening interface built with Streamlit.",
+    "image": diabetes,
+    "tags": ["Python", "Scikit-Learn", "Streamlit", "Machine Learning", "Data Science"],
+    "category": "machine learning",
+    "github": "https://github.com/ahmadnawaz01/Diabetes-Prediction-System---Scklearn---Streamlit",
+    "webapp": "https://diabetes-prediction-system---scklearn---app-8kpe99hnltcja7swdh.streamlit.app/"
+  },
+  {
+    "id": 2,
+    "title": "WhatsApp Chat Analyzer",
+    "date": "May 2026",
+    "description": "An end-to-end conversational analytics engine that transforms raw, unformatted chat exports into deep behavioral and linguistic insights. Features custom regex preprocessing pipelines, dynamic time-series feature extraction, advanced text-mining using Hinglish/English stop-word masks, and interactive 2D Seaborn heatmaps.",
+    "image": wh,
+    "tags": ["Python", "Pandas", "Matplotlib", "Seaborn", "Streamlit", "Data Visualization"],
+    "category": "data science",
+    "github": "https://github.com/ahmadnawaz01/whatsapp-chat-analyzer-_-Pandas_-matplotlib_streamlit",
+    "webapp": "https://whatsapp-chat-analyzer--pandas-matplotlibapp-xmsocw2qtupys2ddx.streamlit.app/"
+  },
+  {
+    id: 6,
     title: "Personal Portfolio",
     date: "April 2026",
     description:
@@ -337,7 +350,7 @@ export const projects = [
     webapp: "https://ahmadnawazportfolio.netlify.app/",
   },
   {
-    id: 7, 
+    id: 7,
     title: "EventPass",
     date: "Oct 2025 - Nov 2025",
     description:
@@ -354,7 +367,7 @@ export const projects = [
     title: "SwiftKeys",
     date: "Jan 2026 - Feb 2026",
     description:
-    "A highly responsive peer-to-peer car rental UI showcase featuring a sleek public storefront and an isolated, comprehensive dashboard layout for vehicle fleet management.",
+      "A highly responsive peer-to-peer car rental UI showcase featuring a sleek public storefront and an isolated, comprehensive dashboard layout for vehicle fleet management.",
     image:
       "https://github.com/ahmadnawaz01/SwiftKeys-rental-car-booking-site-Project/raw/main/2.png",
     tags: ["React 19", "Vite 8", "Tailwind CSS v4", "React Router v7"],
@@ -363,7 +376,7 @@ export const projects = [
     webapp: "https://swiftkeeys.netlify.app/",
   },
   {
-    id: 4, 
+    id: 4,
     title: "PassOP",
     date: "Aug 2025",
     description:

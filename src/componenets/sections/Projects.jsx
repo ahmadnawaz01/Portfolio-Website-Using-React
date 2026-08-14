@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { projects } from "../../data/constants";
+import { useData } from "../../context/DataContext";
 import ProjectCard from "../Cards/ProjectCard";
 
 const Container = styled.div`
@@ -28,21 +28,24 @@ const Wrapper = styled.div`
   }
 `;
 const Title = styled.div`
+  font-family: 'Nunito', sans-serif;
   font-size: 52px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 900;
   margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
+  color: #332F3A;
   @media (max-width: 768px) {
     margin-top: 12px;
-    font-size: 32px;
+    font-size: 36px;
   }
 `;
+
 const Desc = styled.div`
+  font-family: 'DM Sans', sans-serif;
   font-size: 18px;
   text-align: center;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
+  color: #635F69;
   @media (max-width: 768px) {
     font-size: 16px;
   }
@@ -50,31 +53,46 @@ const Desc = styled.div`
 
 const ToggleButtonGroup = styled.div`
   display: flex;
-  border: 1.5px solid ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.primary};
-  font-size: 16px;
-  border-radius: 12px;
-font-weight 500;
-margin: 22px 0;
-@media (max-width: 768px){
+  background: #F4F1FA;
+  box-shadow: inset 6px 6px 12px #cdc6d9, inset -6px -6px 12px #ffffff;
+  padding: 6px;
+  border-radius: 24px;
+  margin: 28px 0;
+  gap: 4px;
+  @media (max-width: 768px){
     font-size: 12px;
-}
+  }
 `;
+
 const ToggleButton = styled.div`
-  padding: 8px 18px;
-  border-radius: 6px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 10px 22px;
+  border-radius: 18px;
   cursor: pointer;
+  color: #635F69;
+  transition: all 0.2s ease-in-out;
+  
   &:hover {
-    background: ${({ theme }) => theme.primary + 20};
+    color: #DB2777;
   }
+  
   @media (max-width: 768px) {
-    padding: 6px 8px;
-    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 12px;
   }
-  ${({ active, theme }) =>
+  
+  ${({ active }) =>
     active &&
     `
-  background:  ${theme.primary + 20};
+    color: #FFFFFF !important;
+    background: linear-gradient(135deg, #F472B6 0%, #DB2777 100%);
+    box-shadow: 
+      6px 6px 14px #cdc6d9,
+      -6px -6px 14px #ffffff,
+      inset 2px 2px 4px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 4px rgba(219, 39, 119, 0.3);
   `}
 `;
 const Divider = styled.div`
@@ -91,6 +109,7 @@ const CardContainer = styled.div`
 `;
 
 const Projects = () => {
+  const { projects } = useData();
   const [toggle, setToggle] = useState("all");
   return (
     <Container id="Projects">
@@ -109,35 +128,7 @@ const Projects = () => {
             $active={toggle === "all"}
             onClick={() => setToggle("all")}
           >
-            ALL
-          </ToggleButton>
-          <Divider />
-          <ToggleButton
-            $active={toggle === "deep learning"}
-            onClick={() => setToggle("deep learning")}
-          >
-            DEEP LEARNING
-          </ToggleButton>
-          <Divider />
-          <ToggleButton
-            $active={toggle === "machine learning"}
-            onClick={() => setToggle("machine learning")}
-          >
-            MACHINE LEARNING
-          </ToggleButton>
-          <Divider />
-          <ToggleButton
-            $active={toggle === "web app"}
-            onClick={() => setToggle("web app")}
-          >
-            WEB APP"S
-          </ToggleButton>
-          <Divider />
-          <ToggleButton
-            $active={toggle === "android app"}
-            onClick={() => setToggle("android app")}
-          >
-            ANDROID APP'S
+            Projects
           </ToggleButton>
         </ToggleButtonGroup>
 

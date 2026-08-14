@@ -1,5 +1,5 @@
 import React from 'react'
-import { Bio } from "../../data/constants"
+import { useData } from "../../context/DataContext"
 import styled from 'styled-components'
 import Typewriter from 'typewriter-effect';
 import proimage from '../../images/profileimg.jpg'
@@ -74,129 +74,167 @@ margin-bottom: 30px;
 
 
 const Title = styled.div`
-font-weight: 700;
-font-size: 50px;
-color: ${({ theme }) => theme.text_primary};
-line-height: 68px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 54px;
+  color: #332F3A;
+  line-height: 64px;
 
-@media (max-width: 960px)
-{
-text-align: center;
-}
+  @media (max-width: 960px) {
+    text-align: center;
+  }
 
-@media (max-width: 640px)
-{
-font-size:40px;
-line-height: 48px;
-margin-bottom: 8px;
-}
+  @media (max-width: 640px) {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 8px;
+  }
 `;
+
 const TextLoop = styled.div`
-font-weight: 600;
-font-size: 32px;
-display: flex;
-gap: 12px;
-color: ${({ theme }) => theme.text_primary};
-line-height: 68px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  display: flex;
+  gap: 12px;
+  color: #332F3A;
+  line-height: 56px;
 
-@media (max-width: 960px)
-{
-text-align: center;
-}
+  @media (max-width: 960px) {
+    text-align: center;
+    justify-content: center;
+  }
 
-@media (max-width: 640px)
-{
-font-size:22px;
-line-height: 48px;
-margin-bottom: 16px;
-}
+  @media (max-width: 640px) {
+    font-size: 22px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
 `;
+
 const Span = styled.div`
-cursor: pointer;
-color: ${({ theme }) => theme.primary};
+  cursor: pointer;
+  color: #DB2777;
+  font-weight: 900;
 `;
-
 
 const TextDescription = styled.div`
-font-size: 20px;
-line-height: 32px;
-margin-bottom: 42px;
-color: ${({ theme }) => theme.text_primary+95};
-@media (max-width: 960px)
-{
-text-align: center;
-}
+  font-family: 'DM Sans', sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-bottom: 42px;
+  color: #635F69;
 
-@media (max-width: 640px)
-{
-font-size:16px;
-line-height: 32px;
-}
+  @media (max-width: 960px) {
+    text-align: center;
+  }
 
+  @media (max-width: 640px) {
+    font-size: 16px;
+    line-height: 28px;
+  }
 `;
 
-const ResumeButton=styled.a`
--webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
+const ResumeButton = styled.a`
   text-decoration: none;
-
+  display: inline-block;
   width: 95%;
   max-width: 300px;
   text-align: center;
   padding: 16px 0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 19px;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #F472B6 0%, #DB2777 100%);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    12px 12px 24px #cdc6d9,
+    -12px -12px 24px #ffffff,
+    inset 4px 4px 8px rgba(255, 255, 255, 0.6),
+    inset -4px -4px 8px rgba(219, 39, 119, 0.3);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 
-  background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 20px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -75%;
+    width: 50%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.35);
+    transform: rotate(25deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+  }
 
-     &:hover {
-        transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
-    }    
-    
-    
-    @media (max-width: 640px) {
-        padding: 12px 0;
-        font-size: 18px;
-    } 
-    color: white;
-`;
+  &:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 
+      16px 16px 32px #cdc6d9,
+      -16px -16px 32px #ffffff,
+      inset 4px 4px 8px rgba(255, 255, 255, 0.8),
+      inset -4px -4px 8px rgba(219, 39, 119, 0.4);
+  }
 
-const Img=styled.img`
- border-radius: 50%;
-  width: 100%;
-  height: 100%;
-  max-width: 400px;
-  max-height: 400px;
-  border: 2px solid ${({ theme }) => theme.primary};
+  &:hover::after {
+    left: 125%;
+    opacity: 1;
+  }
+
+  &:active {
+    transform: scale(0.95);
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2);
+  }
 
   @media (max-width: 640px) {
-    max-width: 280px;
-    max-height: 280px;
+    padding: 14px 0;
+    font-size: 17px;
   }
 `;
 
-const HeroBg=styled.div`
+const floatAnim = `
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+`;
+
+const Img = styled.img`
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  max-width: 380px;
+  max-height: 380px;
+  border: 8px solid #F4F1FA;
+  box-shadow: 
+    24px 24px 48px #cdc6d9,
+    -24px -24px 48px #ffffff,
+    inset 8px 8px 16px rgba(219, 39, 119, 0.15),
+    inset -8px -8px 16px rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease-in-out;
+  animation: float 4s ease-in-out infinite;
+
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: 
+      30px 30px 60px #cdc6d9,
+      -30px -30px 60px #ffffff,
+      inset 10px 10px 20px rgba(219, 39, 119, 0.2),
+      inset -10px -10px 20px rgba(255, 255, 255, 1);
+  }
+
+  @media (max-width: 640px) {
+    max-width: 270px;
+    max-height: 270px;
+  }
+`;
+
+const HeroBg = styled.div`
  position: absolute;
   display: flex;
   justify-content: end;
@@ -221,56 +259,57 @@ const HeroBg=styled.div`
 `;
 
 const Hero = () => {
+  const { Bio } = useData();
   return (
     <>
       <div id='About'>
         <HeroContainer className='flex justify-center relative  '>
           <HeroBg>
-            <HeroBgAnimation/>
-            <StarCanvas/>
+            <HeroBgAnimation />
+            <StarCanvas />
           </HeroBg>
           <motion.div {...headContainerAnimation}>
 
-          <HeroInnerContainer className='flex relative justify-between items-center w-full'>
-            <HeroLeftContainer>
-              <motion.div {...headTextAnimation}>
+            <HeroInnerContainer className='flex relative justify-between items-center w-full'>
+              <HeroLeftContainer>
+                <motion.div {...headTextAnimation}>
 
-              <Title>
-                Hi, I am <br /> {Bio.name}
-              </Title>
-              <TextLoop>
-                I am a
-                <Span>
-                  <Typewriter options={
-                    {
-                      strings: Bio.roles,
-                      autoStart: true,
-                      loop: true,
-                    }
-                  } />
-                </Span>
-              </TextLoop>
-                  </motion.div>
-                  <motion.div {...headContentAnimation}>
+                  <Title>
+                    Hi, I am <br /> {Bio.name}
+                  </Title>
+                  <TextLoop>
+                    I am a
+                    <Span>
+                      <Typewriter options={
+                        {
+                          strings: Bio.roles,
+                          autoStart: true,
+                          loop: true,
+                        }
+                      } />
+                    </Span>
+                  </TextLoop>
+                </motion.div>
+                <motion.div {...headContentAnimation}>
 
-              <TextDescription>
-                {Bio.description}
-              </TextDescription>
-                  </motion.div>
-              <ResumeButton href={Bio.resume} target='_blank'>
-                check Resume
-              </ResumeButton>
-            </HeroLeftContainer>
-            <HeroRightContainer>
-              <motion.div {...headContentAnimation}>
+                  <TextDescription>
+                    {Bio.description}
+                  </TextDescription>
+                </motion.div>
+                <ResumeButton href={Bio.resume} target='_blank'>
+                  check Resume
+                </ResumeButton>
+              </HeroLeftContainer>
+              <HeroRightContainer>
+                <motion.div {...headContentAnimation}>
 
-              <Tilt>
-              <Img src={proimage} alt="Ahmad Nawaz"/>
-              </Tilt>
-              </motion.div>
-            </HeroRightContainer>
-          </HeroInnerContainer>
-                      </motion.div>
+                  <Tilt>
+                    <Img src={proimage} alt="Ahmad Nawaz" />
+                  </Tilt>
+                </motion.div>
+              </HeroRightContainer>
+            </HeroInnerContainer>
+          </motion.div>
         </HeroContainer>
       </div>
     </>
