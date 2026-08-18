@@ -220,12 +220,12 @@ const Contact = () => {
   const handelSubmit = (e) => {
     e.preventDefault();
 
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || "service_lscxapk";
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "template_1x4khd5";
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "IV7TvUQKqT4WS5FpI";
 
     if (!serviceId || !templateId || !publicKey) {
-      toast.error("EmailJS configuration is missing in .env file.");
+      toast.error("EmailJS configuration is missing.");
       return;
     }
 
