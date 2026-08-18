@@ -181,10 +181,10 @@ const MobileMenu = styled.ul`
     -20px -20px 40px #ffffff,
     inset 4px 4px 8px rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease-in-out;
-  transform: ${({ isOpen }) => (isOpen ? "translateY(0)" : "translateY(-20px)")};
-  opacity: ${({ isOpen }) => (isOpen ? "1" : "0")};
-  z-index: ${({ isOpen }) => (isOpen ? "1000" : "-1000")};
-  pointer-events: ${({ isOpen }) => (isOpen ? "auto" : "none")};
+  transform: ${({ $isOpen }) => ($isOpen ? "translateY(0)" : "translateY(-20px)")};
+  opacity: ${({ $isOpen }) => ($isOpen ? "1" : "0")};
+  z-index: ${({ $isOpen }) => ($isOpen ? "1000" : "-1000")};
+  pointer-events: ${({ $isOpen }) => ($isOpen ? "auto" : "none")};
 `;
 
 const Navbar = () => {
@@ -206,7 +206,7 @@ const Navbar = () => {
         <NavItems>
           <NavLink href="#About">About</NavLink>
           <NavLink href="#Skills">Skills</NavLink>
-          <NavLink href="/Projects">Projects</NavLink>
+          <NavLink href="#Projects">Projects</NavLink>
           <NavLink href="#Education">Education</NavLink>
           <NavLink href="#Contact">Contact</NavLink>
         </NavItems>
@@ -217,7 +217,7 @@ const Navbar = () => {
           </GithubButton>
         </ButtonContainer>
 
-        <MobileMenu isOpen={isOpen}>
+        <MobileMenu $isOpen={isOpen}>
           <NavLink onClick={() => setisOpen(false)} href="#About">About</NavLink>
           <NavLink onClick={() => setisOpen(false)} href="#Skills">Skills</NavLink>
           <NavLink onClick={() => setisOpen(false)} href="#Projects">Projects</NavLink>

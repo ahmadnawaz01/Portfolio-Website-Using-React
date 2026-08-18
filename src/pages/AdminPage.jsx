@@ -168,11 +168,11 @@ const Tab = styled.button`
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
-  color: ${({ active }) => (active ? '#FFFFFF' : '#635F69')};
-  background: ${({ active }) =>
-    active ? 'linear-gradient(135deg, #F472B6 0%, #DB2777 100%)' : '#F4F1FA'};
-  box-shadow: ${({ active }) =>
-    active
+  color: ${({ $active }) => ($active ? '#FFFFFF' : '#635F69')};
+  background: ${({ $active }) =>
+    $active ? 'linear-gradient(135deg, #F472B6 0%, #DB2777 100%)' : '#F4F1FA'};
+  box-shadow: ${({ $active }) =>
+    $active
       ? '6px 6px 14px #cdc6d9, -6px -6px 14px #ffffff'
       : '4px 4px 8px #cdc6d9, -4px -4px 8px #ffffff'};
 `;
@@ -382,11 +382,11 @@ const AdminPage = () => {
 
       <Card>
         <TabContainer>
-          <Tab active={activeTab === 'bio'} onClick={() => setActiveTab('bio')}>👤 Bio & Info</Tab>
-          <Tab active={activeTab === 'skills'} onClick={() => setActiveTab('skills')}>⚡ Skills</Tab>
-          <Tab active={activeTab === 'projects'} onClick={() => setActiveTab('projects')}>💼 Projects</Tab>
-          <Tab active={activeTab === 'experiences'} onClick={() => setActiveTab('experiences')}>🏢 Experience</Tab>
-          <Tab active={activeTab === 'education'} onClick={() => setActiveTab('education')}>🎓 Education</Tab>
+          <Tab $active={activeTab === 'bio'} onClick={() => setActiveTab('bio')}>👤 Bio & Info</Tab>
+          <Tab $active={activeTab === 'skills'} onClick={() => setActiveTab('skills')}>⚡ Skills</Tab>
+          <Tab $active={activeTab === 'projects'} onClick={() => setActiveTab('projects')}>💼 Projects</Tab>
+          <Tab $active={activeTab === 'experiences'} onClick={() => setActiveTab('experiences')}>🏢 Experience</Tab>
+          <Tab $active={activeTab === 'education'} onClick={() => setActiveTab('education')}>🎓 Education</Tab>
         </TabContainer>
 
         {/* TAB 1: BIO */}

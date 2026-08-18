@@ -277,7 +277,7 @@ const Contact = () => {
             </ContactCard>
           )}
           {phone && (
-            <ContactCard 
+            <ContactCard
               href={`https://wa.me/${phone.replace(/\D/g, '').replace(/^0/, '92')}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -289,7 +289,7 @@ const Contact = () => {
         </DirectContactContainer>
 
         <ContactForm ref={form} onSubmit={handelSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
+          <ContactTitle>Email Me </ContactTitle>
           <ContactInput
             placeholder="Your Email"
             name="from_email"

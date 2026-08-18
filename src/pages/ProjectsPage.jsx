@@ -89,8 +89,8 @@ const ToggleButton = styled.div`
     font-size: 12px;
   }
   
-  ${({ active }) =>
-    active &&
+  ${({ $active }) =>
+    $active &&
     `
     color: #FFFFFF !important;
     background: linear-gradient(135deg, #F472B6 0%, #DB2777 100%);
@@ -156,7 +156,7 @@ const ProjectsPage = () => {
             {categories.map((cat, index) => (
               <ToggleButton
                 key={index}
-                active={toggle.toLowerCase() === cat.toLowerCase()}
+                $active={toggle.toLowerCase() === cat.toLowerCase()}
                 onClick={() => setToggle(cat)}
               >
                 {cat === "all" ? "All Projects" : cat.charAt(0).toUpperCase() + cat.slice(1)}
