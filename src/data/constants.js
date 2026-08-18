@@ -42,6 +42,7 @@ import pinecone from "../images/pinecone.png"
 import ollama from "../images/ollama.png"
 import colab from "../images/colab.png"
 import antigravity from "../images/antigravity.png"
+import tripswarm from "../images/tripswarm.png"
 
 
 
@@ -62,6 +63,10 @@ export const Bio = {
     "Computer Science student at UCP focused on Generative AI, Agentic AI, Machine Learning, and Deep Learning. Skilled in Python, PyTorch, TensorFlow, Scikit-learn, LangChain, LangGraph, MCP, RAG, FastAPI, and Docker. Experienced in building AI-powered applications and passionate about exploring LLMs, AI agents, and modern AI engineering.",
 
   github: "https://github.com/ahmadnawaz01",
+
+  email: "raiahmadnawaz.019@gmail.com",
+
+  phone: "0314-3507734",
 
   resume:
     "https://drive.google.com/file/d/1xewBCg-QlC6l4xl-LzXLNsvCWLP2Bsga/view?usp=sharing",
@@ -213,6 +218,24 @@ export const education = [
 ];
 export const projects = [
   {
+    "id": 888,
+    "title": "TravelSwarm: Multi-Agent Travel Planning System",
+    "date": "August 2026",
+    "description": "Architected an end-to-end autonomous multi-agent travel planning platform using LangGraph and Groq (Llama 3.3 70B). Implemented specialized collaborative agents for real-time flight telemetry via AviationStack API, accommodation discovery via Tavily Search API, and budget-aware itinerary generation. Integrated PostgreSQL with PostgresSaver for persistent thread-based memory checkpointing and built an asynchronous FastAPI backend paired with a dynamic dashboard featuring instant PDF exports.",
+    "image": tripswarm,
+    "tags": [
+      "Python",
+      "LangGraph",
+      "Llama 3.3",
+      "PostgreSQL",
+      "Tavily API",
+      "AviationStack API",
+    ],
+    "category": "generative ai",
+    "github": "https://github.com/ahmadnawaz01/TravelSwarm---Multi-Agent-Travel-Planning-System---LangGraph---FastApi---Grok---PostgreSQL-P",
+    "webapp": ""
+  },
+  {
     "id": 87,
     "title": "A-GPT-Agentic-Chatbot",
     "date": "August 2026",
@@ -343,7 +366,7 @@ export const projects = [
     "description": "An end-to-end conversational analytics engine that transforms raw, unformatted chat exports into deep behavioral and linguistic insights. Features custom regex preprocessing pipelines, dynamic time-series feature extraction, advanced text-mining using Hinglish/English stop-word masks, and interactive 2D Seaborn heatmaps.",
     "image": wh,
     "tags": ["Python", "Pandas", "Matplotlib", "Seaborn", "Streamlit", "Data Visualization"],
-    "category": "data science",
+    "category": "machine learning",
     "github": "https://github.com/ahmadnawaz01/whatsapp-chat-analyzer-_-Pandas_-matplotlib_streamlit",
     "webapp": "https://whatsapp-chat-analyzer--pandas-matplotlibapp-xmsocw2qtupys2ddx.streamlit.app/"
   },

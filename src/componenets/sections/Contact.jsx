@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import { Email, WhatsApp } from "@mui/icons-material";
+import { useData } from "../../context/DataContext";
 
 
 const Container = styled.div`
@@ -51,6 +53,55 @@ const Desc = styled.div`
   }
 `;
 
+const DirectContactContainer = styled.div`
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 95%;
+  max-width: 600px;
+  margin-top: 16px;
+`;
+
+const ContactCard = styled.a`
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #F4F1FA;
+  box-shadow: 
+    10px 10px 20px #cdc6d9,
+    -10px -10px 20px #ffffff;
+  padding: 12px 20px;
+  border-radius: 20px;
+  color: #332F3A;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 15px;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-2px);
+    color: #DB2777;
+    box-shadow: 
+      14px 14px 28px #cdc6d9,
+      -14px -14px 28px #ffffff;
+  }
+
+  svg {
+    color: #DB2777;
+    font-size: 20px;
+  }
+
+  @media (max-width: 600px) {
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+  }
+`;
+
 const ContactForm = styled.form`
   width: 95%;
   max-width: 600px;
@@ -64,7 +115,7 @@ const ContactForm = styled.form`
     inset -8px -8px 16px rgba(255, 255, 255, 0.9);
   padding: 36px;
   border-radius: 40px;
-  margin-top: 28px;
+  margin-top: 24px;
   gap: 18px;
 `;
 
@@ -160,11 +211,25 @@ const ContactButton = styled.input`
 
 const Contact = () => {
   const form = useRef();
+  const { Bio } = useData();
+  const [loading, setLoading] = React.useState(false);
+
+  const email = Bio?.email || "raiahmadnawaz.019@gmail.com";
+  const phone = Bio?.phone || "0314-3507734";
+
   const handelSubmit = (e) => {
     e.preventDefault();
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || "s_6mjbzq9";
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "temple2r7i7";
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "IV7TvUQKqT4WI";
+
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      toast.error("EmailJS configuration is missing in .env file.");
+      return;
+    }
+
+    setLoading(true);
 
     emailjs
       .sendForm(
@@ -175,43 +240,85 @@ const Contact = () => {
       )
       .then(
         (result) => {
+          setLoading(false);
           toast.success("Message sent successfully!", {
             position: "bottom-right",
             autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
           });
           form.current.reset();
         },
         (error) => {
-          toast.error("Failed to send message. Please try again.", {
+          setLoading(false);
+          toast.error(`Failed to send message: ${error.text || "Please try again."}`, {
             position: "bottom-right",
           });
-          console.log(error.text);
+          console.error("EmailJS Error:", error);
         }
       );
   };
+
   return (
     <Container id="Contact">
       <Wrapper>
         <Title>Contact</Title>
         <Desc
           style={{
-            marginBottom: "40px",
+            marginBottom: "10px",
           }}
         >
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
+
+        <DirectContactContainer>
+          {email && (
+            <ContactCard href={`mailto:${email}`}>
+              <Email />
+              <span>{email}</span>
+            </ContactCard>
+          )}
+          {phone && (
+            <ContactCard 
+              href={`https://wa.me/${phone.replace(/\D/g, '').replace(/^0/, '92')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <WhatsApp style={{ color: '#25D366' }} />
+              <span>{phone}</span>
+            </ContactCard>
+          )}
+        </DirectContactContainer>
+
         <ContactForm ref={form} onSubmit={handelSubmit}>
-          <ContactTitle>Email Me </ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" name="message" rows={4} />
-          <ContactButton type="submit" value="Send" />
+          <ContactTitle>Email Me 🚀</ContactTitle>
+          <ContactInput
+            placeholder="Your Email"
+            name="from_email"
+            type="email"
+            required
+          />
+          <ContactInput
+            placeholder="Your Name"
+            name="from_name"
+            type="text"
+            required
+          />
+          <ContactInput
+            placeholder="Subject"
+            name="subject"
+            type="text"
+            required
+          />
+          <ContactInputMessage
+            placeholder="Message"
+            name="message"
+            rows={4}
+            required
+          />
+          <ContactButton
+            type="submit"
+            value={loading ? "Sending..." : "Send"}
+            disabled={loading}
+          />
         </ContactForm>
       </Wrapper>
     </Container>
