@@ -232,7 +232,7 @@ export const projects = [
       "AviationStack API",
     ],
     "category": "generative ai",
-    "github": "https://github.com/ahmadnawaz01/TravelSwarm---Multi-Agent-Travel-Planning-System---LangGraph---FastApi---Grok---PostgreSQL-P",
+    "github": "https://github.com/ahmadnawaz01/TravelSwarm---Multi-Agent-Travel-Planning-System---LangGraph---FastApi---Grok---PostgreSQL-",
     "webapp": ""
   },
   {

@@ -11,7 +11,6 @@ import {
   headContentAnimation,
   headTextAnimation,
 } from "../../utils/motion";
-import StarCanvas from "../../canvas/Stars";
 
 
 const HeroContainer = styled.div`
@@ -266,7 +265,6 @@ const Hero = () => {
         <HeroContainer className='flex justify-center relative  '>
           <HeroBg>
             <HeroBgAnimation />
-            <StarCanvas />
           </HeroBg>
           <motion.div {...headContainerAnimation}>
 
