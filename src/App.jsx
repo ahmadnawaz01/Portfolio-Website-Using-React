@@ -13,6 +13,7 @@ import AdminPage from "./pages/AdminPage"
 import ProjectsPage from "./pages/ProjectsPage"
 import { DataProvider } from "./context/DataContext"
 import { ToastContainer } from 'react-toastify';
+import ScrollToTop from "./utils/ScrollToTop";
 import 'react-toastify/dist/ReactToastify.css';
 
 const Body = styled.div`
@@ -64,6 +65,7 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       <DataProvider>
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<PortfolioHome />} />
             <Route path="/projects" element={<ProjectsPage />} />

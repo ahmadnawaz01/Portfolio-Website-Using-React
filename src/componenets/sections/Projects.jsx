@@ -59,6 +59,12 @@ const CardContainer = styled.div`
   align-items: center;
   gap: 28px;
   flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    & > *:nth-child(n + 4) {
+      display: none;
+    }
+  }
 `;
 
 const ViewAllButton = styled(Link)`

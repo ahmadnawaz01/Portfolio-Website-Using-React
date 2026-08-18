@@ -34,6 +34,16 @@ import thiss from "../images/this.png";
 import mcp from "../images/mcp.jfif"
 import rag from "../images/rag.jfif"
 import agpt from "../images/a gpt.png"
+import langchain from "../images/langchain.png"
+import chromadb from "../images/chromadb.png"
+import langgraph from "../images/langgraph.png"
+import modelmcp from "../images/mcp.png"
+import pinecone from "../images/pinecone.png"
+import ollama from "../images/ollama.png"
+import colab from "../images/colab.png"
+import antigravity from "../images/antigravity.png"
+
+
 
 
 
@@ -73,7 +83,7 @@ export const Bio = {
 
 export const skills = [
   {
-    title: "Machine Learning / Deep Learning",
+    title: "Data Science | ML/DL",
     skills: [
       { name: "Python", image: pythonimg },
       { name: "NumPy", image: numpy },
@@ -81,8 +91,6 @@ export const skills = [
       { name: "Matplotlib", image: matplot },
       { name: "Seaborn", image: seaborn },
       { name: "Scikit-learn", image: sklearn },
-      { name: "Machine Learning", image: sklearn },
-
       { name: "Keras", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" },
       { name: "PyTorch", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" }
     ],
@@ -90,18 +98,20 @@ export const skills = [
   {
     title: "Generative AI / Agentic AI",
     skills: [
-      { name: "LangChain", image: "https://raw.githubusercontent.com/langchain-ai/langchain/master/docs/static/img/langchain.png" },
-      { name: "LangGraph", image: "https://raw.githubusercontent.com/langchain-ai/langgraph/main/docs/static/img/langgraph.png" },
-      { name: "MCP (Model Context Protocol)", image: "https://raw.githubusercontent.com/modelcontextprotocol/specification/main/assets/mcp.svg" },
+      { name: "LangChain", image: langchain },
+      { name: "LangGraph", image: langgraph },
+      { name: "MCP (Model Context Protocol)", image: modelmcp },
       { name: "RAG", image: "https://cdn-icons-png.flaticon.com/512/8637/8637099.png" },
-      { name: "ChromaDB", image: "https://docs.trychroma.com/img/chroma.svg" },
-      { name: "FAISS", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/meta/meta-original.svg" }
+      { name: "ChromaDB", image: chromadb },
+      { name: "Pinecone", image: pinecone },
+      { name: "Ollama", image: ollama },
+
     ],
   },
   {
     title: "Backend & Deployment",
     skills: [
-      { name: "MCP (Model Context Protocol)", image: "https://raw.githubusercontent.com/modelcontextprotocol/specification/main/assets/mcp.svg" },
+      { name: "MCP (Model Context Protocol)", image: modelmcp },
       { name: "FastAPI", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
       { name: "Docker", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
       { name: "REST APIs", image: "https://cdn-icons-png.flaticon.com/512/1006/1006771.png" },
@@ -133,17 +143,18 @@ export const skills = [
       { name: "VS Code", image: vscodeimg },
       { name: "Jupyter Notebook", image: jupyterimg },
       { name: "Postman", image: postmanimg },
+      { name: "Google Colab", image: colab },
+      { name: "Antigravity", image: antigravity },
+      { name: "Ollama", image: ollama }
     ],
   },
   {
     title: "Web / Mobile",
     skills: [
       { name: "React", image: reactimg },
-      { name: "Next.js", image: nextjsimg },
       { name: "HTML", image: htmlimg },
       { name: "CSS", image: cssimg },
       { name: "Tailwind CSS", image: tailwindcss },
-      { name: "Flutter", image: flutterimg },
       { name: "Streamlit", image: streamlit },
     ],
   },
@@ -217,7 +228,7 @@ export const projects = [
       "RAG",
       "Agentic AI"
     ],
-    "category": "deep learning",
+    "category": "generative ai",
     "github": "https://github.com/ahmadnawaz01/A-GPT-Agentic-Chatbot-with-Langgraph-LangSmith-FastApi-ChromaDB-SQLAlchemy",
     "webapp": ""
   },
@@ -237,7 +248,7 @@ export const projects = [
       "Vector Search",
       "NLP"
     ],
-    "category": "deep learning",
+    "category": "generative ai",
     "github": "https://github.com/ahmadnawaz01/Youtube_RAG_ChatBot-Using-Langchain---Youtube-Transcript-Api---Google-Gemini-Api",
     "webapp": ""
   },
@@ -255,7 +266,7 @@ export const projects = [
       "Claude Desktop",
       "SSE"
     ],
-    "category": "deep learning",
+    "category": "generative ai",
     "github": "https://github.com/ahmadnawaz01/expense-tracker-mcp-server",
     "webapp": ""
   },

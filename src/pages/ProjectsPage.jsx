@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useData } from '../context/DataContext';
 import ProjectCard from '../componenets/Cards/ProjectCard';
-import Navbar from '../componenets/Navbar';
 import Footer from '../componenets/Footer';
 import { Link } from 'react-router-dom';
 
@@ -145,7 +144,6 @@ const ProjectsPage = () => {
 
   return (
     <>
-      <Navbar />
       <Container>
         <Wrapper>
           <BackButton to="/">← Back to Home</BackButton>

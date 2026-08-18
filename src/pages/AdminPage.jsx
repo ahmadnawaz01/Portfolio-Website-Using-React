@@ -185,6 +185,34 @@ const ItemCard = styled.div`
   margin-bottom: 16px;
 `;
 
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+`;
+
+const ModalContent = styled.div`
+  background: #F4F1FA;
+  box-shadow: 20px 20px 45px #cdc6d9, -20px -20px 45px #ffffff;
+  border-radius: 28px;
+  padding: 28px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
+
 const AdminPage = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     return sessionStorage.getItem('admin_authenticated') === 'true';
@@ -207,6 +235,8 @@ const AdminPage = () => {
   } = useData();
 
   const [activeTab, setActiveTab] = useState('bio');
+  const [showExportModal, setShowExportModal] = useState(false);
+  const [exportedCode, setExportedCode] = useState('');
 
   // Form local states
   const [bioForm, setBioForm] = useState({ ...Bio });
@@ -214,6 +244,28 @@ const AdminPage = () => {
   const [projectsForm, setProjectsForm] = useState(JSON.parse(JSON.stringify(projects)));
   const [expForm, setExpForm] = useState(JSON.parse(JSON.stringify(experiences)));
   const [eduForm, setEduForm] = useState(JSON.parse(JSON.stringify(education)));
+
+  const handleOpenExportModal = () => {
+    const code = `// Updated constants.js generated from Admin Dashboard\nexport const Bio = ${JSON.stringify(Bio, null, 2)};\n\nexport const skills = ${JSON.stringify(skills, null, 2)};\n\nexport const experiences = ${JSON.stringify(experiences, null, 2)};\n\nexport const education = ${JSON.stringify(education, null, 2)};\n\nexport const projects = ${JSON.stringify(projects, null, 2)};\n`;
+    setExportedCode(code);
+    setShowExportModal(true);
+  };
+
+  const handleDownloadConstants = () => {
+    const blob = new Blob([exportedCode], { type: 'text/javascript' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'constants.js';
+    a.click();
+    URL.revokeObjectURL(url);
+    toast.success('Downloaded updated constants.js file!');
+  };
+
+  const handleCopyConstants = () => {
+    navigator.clipboard.writeText(exportedCode);
+    toast.success('Copied updated constants.js code to clipboard!');
+  };
 
   const envUser = import.meta.env.VITE_ADMIN_USERNAME || 'admin';
   const envPass = import.meta.env.VITE_ADMIN_PASSWORD || 'admin123';
@@ -309,10 +361,13 @@ const AdminPage = () => {
     <AdminContainer>
       <div style={{ width: '100%', maxWidth: '1000px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Title style={{ margin: 0 }}>Admin Dashboard</Title>
-        <div style={{ display: 'flex', gap: '12px' }}>
+        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
           <Link to="/">
             <SecondaryButton>View Site</SecondaryButton>
           </Link>
+          <PrimaryButton onClick={handleOpenExportModal}>
+            📥 Export constants.js
+          </PrimaryButton>
           <SecondaryButton onClick={() => {
             if (window.confirm('Reset all website data to initial defaults?')) {
               resetToDefaults();
@@ -813,6 +868,35 @@ const AdminPage = () => {
           </div>
         )}
       </Card>
+
+      {showExportModal && (
+        <ModalOverlay onClick={() => setShowExportModal(false)}>
+          <ModalContent onClick={(e) => e.stopPropagation()}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <h2 style={{ fontFamily: 'Nunito, sans-serif', fontWeight: 900, color: '#332F3A', margin: 0 }}>
+                Export updated constants.js
+              </h2>
+              <DangerButton onClick={() => setShowExportModal(false)}>✕ Close</DangerButton>
+            </div>
+            <p style={{ margin: 0, color: '#635F69', fontSize: '14px' }}>
+              Copy this updated JavaScript code or download the file to replace your <code>src/data/constants.js</code> in your project codebase.
+            </p>
+            <Textarea
+              value={exportedCode}
+              readOnly
+              style={{ flex: 1, minHeight: '300px', fontFamily: 'monospace', fontSize: '13px', whiteSpace: 'pre' }}
+            />
+            <div style={{ display: 'flex', gap: '12px', justifyContent: 'flex-end' }}>
+              <SecondaryButton onClick={handleCopyConstants}>
+                📋 Copy Code
+              </SecondaryButton>
+              <PrimaryButton onClick={handleDownloadConstants}>
+                📥 Download constants.js
+              </PrimaryButton>
+            </div>
+          </ModalContent>
+        </ModalOverlay>
+      )}
     </AdminContainer>
   );
 };
