@@ -218,6 +218,24 @@ export const education = [
 ];
 export const projects = [
   {
+    "id": 888,
+    "title": "TravelSwarm: Multi-Agent Travel Planning System",
+    "date": "August 2026",
+    "description": "Architected an end-to-end autonomous multi-agent travel planning platform using LangGraph and Groq (Llama 3.3 70B). Implemented specialized collaborative agents for real-time flight telemetry via AviationStack API, accommodation discovery via Tavily Search API, and budget-aware itinerary generation. Integrated PostgreSQL with PostgresSaver for persistent thread-based memory checkpointing and built an asynchronous FastAPI backend paired with a dynamic dashboard featuring instant PDF exports.",
+    "image": tripswarm,
+    "tags": [
+      "Python",
+      "LangGraph",
+      "Llama 3.3",
+      "PostgreSQL",
+      "Tavily API",
+      "AviationStack API",
+    ],
+    "category": "Gen / Agentic AI",
+    "github": "https://github.com/ahmadnawaz01/TravelSwarm---Multi-Agent-Travel-Planning-System---LangGraph---FastApi---Grok---PostgreSQL-",
+    "webapp": ""
+  },
+  {
     "id": 889,
     "title": "DeepWriter AI: Autonomous Multi-Agent Technical Authoring Platform",
     "date": "August 2026",
@@ -234,24 +252,6 @@ export const projects = [
     ],
     "category": "Gen / Agentic AI",
     "github": "https://github.com/ahmadnawaz01/Deep-Writer-AI-LangGraph-Ollama-Tavily-Subgraphs-FastApi-",
-    "webapp": ""
-  },
-  {
-    "id": 888,
-    "title": "TravelSwarm: Multi-Agent Travel Planning System",
-    "date": "August 2026",
-    "description": "Architected an end-to-end autonomous multi-agent travel planning platform using LangGraph and Groq (Llama 3.3 70B). Implemented specialized collaborative agents for real-time flight telemetry via AviationStack API, accommodation discovery via Tavily Search API, and budget-aware itinerary generation. Integrated PostgreSQL with PostgresSaver for persistent thread-based memory checkpointing and built an asynchronous FastAPI backend paired with a dynamic dashboard featuring instant PDF exports.",
-    "image": tripswarm,
-    "tags": [
-      "Python",
-      "LangGraph",
-      "Llama 3.3",
-      "PostgreSQL",
-      "Tavily API",
-      "AviationStack API",
-    ],
-    "category": "Gen / Agentic AI",
-    "github": "https://github.com/ahmadnawaz01/TravelSwarm---Multi-Agent-Travel-Planning-System---LangGraph---FastApi---Grok---PostgreSQL-",
     "webapp": ""
   },
   {
