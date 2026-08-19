@@ -231,7 +231,7 @@ export const projects = [
       "Tavily API",
       "AviationStack API",
     ],
-    "category": "generative ai",
+    "category": "Gen / Agentic AI",
     "github": "https://github.com/ahmadnawaz01/TravelSwarm---Multi-Agent-Travel-Planning-System---LangGraph---FastApi---Grok---PostgreSQL-",
     "webapp": ""
   },
@@ -251,7 +251,7 @@ export const projects = [
       "RAG",
       "Agentic AI"
     ],
-    "category": "generative ai",
+    "category": "Gen / Agentic AI",
     "github": "https://github.com/ahmadnawaz01/A-GPT-Agentic-Chatbot-with-Langgraph-LangSmith-FastApi-ChromaDB-SQLAlchemy",
     "webapp": ""
   },
@@ -271,7 +271,7 @@ export const projects = [
       "Vector Search",
       "NLP"
     ],
-    "category": "generative ai",
+    "category": "Gen / Agentic AI",
     "github": "https://github.com/ahmadnawaz01/Youtube_RAG_ChatBot-Using-Langchain---Youtube-Transcript-Api---Google-Gemini-Api",
     "webapp": ""
   },
@@ -289,7 +289,7 @@ export const projects = [
       "Claude Desktop",
       "SSE"
     ],
-    "category": "generative ai",
+    "category": "Gen / Agentic AI",
     "github": "https://github.com/ahmadnawaz01/expense-tracker-mcp-server",
     "webapp": ""
   },
@@ -308,7 +308,7 @@ export const projects = [
       "NLP",
       "LSTM"
     ],
-    "category": "deep learning",
+    "category": "Data Science | ML/DL",
     "github": "https://github.com/ahmadnawaz01/Sherlock-LSTM-Next-Word-Predictor-NLP-Keras",
     "webapp": "https://sherlock-lstm-next-word-predictor-nlp-keras-hdr.streamlit.app/"
   },
@@ -320,7 +320,7 @@ export const projects = [
     "description": "An end-to-end NLP application that predicts semantic equivalence between question pairs. Bypasses standard vectorization by engineering over 20 advanced domain-specific features—including token overlap metrics, length differences, and fuzzy string matching heuristics—to train a robust classification model.",
     "image": "https://raw.githubusercontent.com/ahmadnawaz01/Quora-Duplicate-Questions-NLP/main/appscreenshotr.png",
     "tags": ["Python", "Scikit-Learn", "Streamlit", "NLTK", "FuzzyWuzzy", "NLP"],
-    "category": "machine learning",
+    "category": "Data Science | ML/DL",
     "github": "https://github.com/ahmadnawaz01/Quora-Duplicate-Questions-NLP",
     "webapp": "https://quora-duplicate-questions-nlp.streamlit.app/"
   },
@@ -331,7 +331,7 @@ export const projects = [
     "description": "An end-to-end Content-Based Recommendation Engine that calculates semantic vector distances across 5,000 titles. Implemented Joblib matrix compression to reduce storage footprints by 60%, bypassing cloud deployment limits. Features a clean, poster-first UI that streams real-time media via the TMDB API.",
     "image": mv,
     "tags": ["Python", "Scikit-Learn", "Streamlit", "Joblib", "Machine Learning", "NLP"],
-    "category": "machine learning",
+    "category": "Data Science | ML/DL",
     "github": "https://github.com/ahmadnawaz01/Movie-Recomendation-System---Machine-Learning-Project",
     "webapp": "https://movie-recomendation-system---machine-learning-project-3shsnryt.streamlit.app/"
   },
@@ -344,7 +344,7 @@ export const projects = [
     image:
       "https://raw.githubusercontent.com/ahmadnawaz01/SMS-Span-Classifier---Machine-Learning-Project---Scklearn---Streamlit/main/sms.spam.classifier.png",
     tags: ["Python", "Scikit-Learn", "Streamlit", "NLTK", "Machine Learning"],
-    category: "machine learning",
+    category: "Data Science | ML/DL",
     github: "https://github.com/ahmadnawaz01/SMS-Span-Classifier---Machine-Learning-Project---Scklearn---Streamlit",
     webapp: "https://sms-span-classifier---machine-learning-project---scklearn---ap.streamlit.app/",
   },
@@ -355,7 +355,7 @@ export const projects = [
     "description": "An end-to-end Machine Learning web application designed for early healthcare screening. Implemented a Support Vector Machine (SVM) classifier mapped to a robust data preprocessing pipeline using StandardScaler. Features a responsive, real-time diagnostic screening interface built with Streamlit.",
     "image": diabetes,
     "tags": ["Python", "Scikit-Learn", "Streamlit", "Machine Learning", "Data Science"],
-    "category": "machine learning",
+    "category": "Data Science | ML/DL",
     "github": "https://github.com/ahmadnawaz01/Diabetes-Prediction-System---Scklearn---Streamlit",
     "webapp": "https://diabetes-prediction-system---scklearn---app-8kpe99hnltcja7swdh.streamlit.app/"
   },
@@ -366,7 +366,7 @@ export const projects = [
     "description": "An end-to-end conversational analytics engine that transforms raw, unformatted chat exports into deep behavioral and linguistic insights. Features custom regex preprocessing pipelines, dynamic time-series feature extraction, advanced text-mining using Hinglish/English stop-word masks, and interactive 2D Seaborn heatmaps.",
     "image": wh,
     "tags": ["Python", "Pandas", "Matplotlib", "Seaborn", "Streamlit", "Data Visualization"],
-    "category": "machine learning",
+    "category": "Data Science | ML/DL",
     "github": "https://github.com/ahmadnawaz01/whatsapp-chat-analyzer-_-Pandas_-matplotlib_streamlit",
     "webapp": "https://whatsapp-chat-analyzer--pandas-matplotlibapp-xmsocw2qtupys2ddx.streamlit.app/"
   },
@@ -379,7 +379,7 @@ export const projects = [
     image:
       "https://github.com/ahmadnawaz01/Portfolio-Website-Using-React/raw/main/portfolio.png",
     tags: ["React 19", "Vite", "Framer Motion", "Tailwind v4", "MUI"],
-    category: "web app",
+    category: "Web App",
     github: "https://github.com/ahmadnawaz01/Portfolio-Website-Using-React",
     webapp: "https://ahmadnawazportfolio.netlify.app/",
   },
@@ -392,7 +392,7 @@ export const projects = [
     image:
       "https://github.com/ahmadnawaz01/MAD-Project_02-Flutter-Event_Booking_App/raw/main/Screenshot_20260601_021538_com.example.event_booking_app.jpg.jpeg",
     tags: ["Flutter", "Dart", "Firebase", "Stripe API"],
-    category: "android app",
+    category: "Android app",
     github: "https://github.com/ahmadnawaz01/MAD-Project_02-Flutter-Event_Booking_App",
     webapp: "https://github.com/ahmadnawaz01/MAD-Project_02-Flutter-Event_Booking_App",
   },
@@ -405,7 +405,7 @@ export const projects = [
     image:
       "https://github.com/ahmadnawaz01/SwiftKeys-rental-car-booking-site-Project/raw/main/2.png",
     tags: ["React 19", "Vite 8", "Tailwind CSS v4", "React Router v7"],
-    category: "web app",
+    category: "Web app",
     github: "https://github.com/ahmadnawaz01/SwiftKeys-rental-car-booking-site-Project",
     webapp: "https://swiftkeeys.netlify.app/",
   },
@@ -418,7 +418,7 @@ export const projects = [
     image:
       "https://github.com/ahmadnawaz01/-PassOP-Password-Manager-Using-React_Tailwindcss/raw/main/passop.png",
     tags: ["React 19", "Vite", "Tailwind CSS", "UUID API"],
-    category: "web app",
+    category: "Web app",
     github: "https://github.com/ahmadnawaz01/-PassOP-Password-Manager-Using-React_Tailwindcss",
     webapp: "https://passop-password-manager-using-react.netlify.app/",
   },
