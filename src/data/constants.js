@@ -43,7 +43,7 @@ import ollama from "../images/ollama.png"
 import colab from "../images/colab.png"
 import antigravity from "../images/antigravity.png"
 import tripswarm from "../images/tripswarm.png"
-
+import deepwriter from "../images/waiting.png"
 
 
 
@@ -217,6 +217,25 @@ export const education = [
   },
 ];
 export const projects = [
+  {
+    "id": 889,
+    "title": "DeepWriter AI: Autonomous Multi-Agent Technical Authoring Platform",
+    "date": "August 2026",
+    "description": "Architected an autonomous multi-agent technical article authoring platform using LangGraph, Google Gemini, and Groq/Ollama. Implemented an intelligent router node integrated with Tavily API for real-time web research and citation synthesis, dynamic fan-out parallel worker agents via LangGraph's Send API for concurrent section drafting, and an isolated reducer subgraph for visual planning and markdown assembly. Built with PostgreSQL (PostgresSaver) for persistent state checkpointing and an asynchronous FastAPI backend with live Server-Sent Events (SSE) streaming.",
+    "image": deepwriter,
+    "tags": [
+      "Python",
+      "LangGraph",
+      "Google Gemini",
+      "FastAPI",
+      "PostgreSQL",
+      "Tavily API",
+      "Server-Sent Events (SSE)"
+    ],
+    "category": "Gen / Agentic AI",
+    "github": "https://github.com/ahmadnawaz01/Deep-Writer-AI-LangGraph-Ollama-Tavily-Subgraphs-FastApi-",
+    "webapp": ""
+  },
   {
     "id": 888,
     "title": "TravelSwarm: Multi-Agent Travel Planning System",
@@ -392,7 +411,7 @@ export const projects = [
     image:
       "https://github.com/ahmadnawaz01/MAD-Project_02-Flutter-Event_Booking_App/raw/main/Screenshot_20260601_021538_com.example.event_booking_app.jpg.jpeg",
     tags: ["Flutter", "Dart", "Firebase", "Stripe API"],
-    category: "Android app",
+    category: "Android App",
     github: "https://github.com/ahmadnawaz01/MAD-Project_02-Flutter-Event_Booking_App",
     webapp: "https://github.com/ahmadnawaz01/MAD-Project_02-Flutter-Event_Booking_App",
   },
@@ -405,7 +424,7 @@ export const projects = [
     image:
       "https://github.com/ahmadnawaz01/SwiftKeys-rental-car-booking-site-Project/raw/main/2.png",
     tags: ["React 19", "Vite 8", "Tailwind CSS v4", "React Router v7"],
-    category: "Web app",
+    category: "Web App",
     github: "https://github.com/ahmadnawaz01/SwiftKeys-rental-car-booking-site-Project",
     webapp: "https://swiftkeeys.netlify.app/",
   },
@@ -418,7 +437,7 @@ export const projects = [
     image:
       "https://github.com/ahmadnawaz01/-PassOP-Password-Manager-Using-React_Tailwindcss/raw/main/passop.png",
     tags: ["React 19", "Vite", "Tailwind CSS", "UUID API"],
-    category: "Web app",
+    category: "Web App",
     github: "https://github.com/ahmadnawaz01/-PassOP-Password-Manager-Using-React_Tailwindcss",
     webapp: "https://passop-password-manager-using-react.netlify.app/",
   },
