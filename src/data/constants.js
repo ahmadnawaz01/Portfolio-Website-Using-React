@@ -44,6 +44,7 @@ import colab from "../images/colab.png"
 import antigravity from "../images/antigravity.png"
 import tripswarm from "../images/tripswarm.png"
 import deepwriter from "../images/waiting.png"
+import multiagent from "../images/crew ai.png"
 
 
 
@@ -217,6 +218,23 @@ export const education = [
   },
 ];
 export const projects = [
+  {
+    "id": 898,
+    "title": "Multi-Agent Market Research & Strategy System (Crew AI)",
+    "date": "August 2026",
+    "description": "Architected an autonomous end-to-end multi-agent market intelligence and business strategy pipeline using CrewAI and Google Gemini. Orchestrated 5 sequential specialist agents across market sizing (TAM/SAM/SOM), live competitive benchmarking, ICP/MVP roadmap definition, financial modeling, and executive investment memo synthesis. Implemented context chaining, Serper API integration for live web intelligence, and iteration constraints for robust reporting.",
+    "image": multiagent,
+    "tags": [
+      "Python",
+      "CrewAI",
+      "Google Gemini",
+      "Serper API",
+      "Multi-Agent Systems",
+    ],
+    "category": "Gen / Agentic AI",
+    "github": "https://github.com/ahmadnawaz01/market_research_and_business_analysis_CrewAI-Project",
+    "webapp": ""
+  },
   {
     "id": 888,
     "title": "TravelSwarm: Multi-Agent Travel Planning System",
