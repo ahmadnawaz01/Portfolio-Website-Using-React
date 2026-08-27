@@ -45,6 +45,7 @@ import antigravity from "../images/antigravity.png"
 import tripswarm from "../images/tripswarm.png"
 import deepwriter from "../images/waiting.png"
 import multiagent from "../images/crew ai.png"
+import aura from "../images/auran8n.png"
 
 
 
@@ -218,6 +219,25 @@ export const education = [
   },
 ];
 export const projects = [
+  {
+  "id": 899,
+  "title": "(N8N) Aura - Autonomous Multi-Tool AI Personal Assistant",
+  "date": "August 2026",
+  "description": "Architected an autonomous multi-tool executive personal assistant workflow using n8n and Google Gemini via LangChain. Orchestrated 7 specialist tool integrations across Google Workspace (Tasks, Calendar, Gmail, Sheets, Docs), SerpApi for real-time localized web search, and a precision calculator. Implemented dynamic session-isolated memory via UUID tracking, $fromAI() parameter extraction, and a custom Python Streamlit chat frontend connected via REST webhooks.",
+  "image": aura,
+  "tags": [
+    "Python",
+    "n8n",
+    "Google Gemini",
+    "LangChain",
+    "Docker",
+    "Streamlit",
+    "SerpApi"
+  ],
+  "category": "Gen / Agentic AI",
+  "github": "https://github.com/ahmadnawaz01/Aura-AI-Personal-Assistant-N8N-Workflow-",
+  "webapp": ""
+},
   {
     "id": 898,
     "title": "Multi-Agent Market Research & Strategy System (Crew AI)",
