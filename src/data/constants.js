@@ -46,6 +46,11 @@ import tripswarm from "../images/tripswarm.png"
 import deepwriter from "../images/waiting.png"
 import multiagent from "../images/crew ai.png"
 import aura from "../images/auran8n.png"
+import med from "../images/unslo.png"
+import huggingface from "../images/huggingface.png"
+import unsloth from "../images/unsloth.png"
+import llama from "../images/llama.png"
+import claude from "../images/claude.png"
 
 
 
@@ -62,7 +67,7 @@ export const Bio = {
   skilldur: "Technologies I work with",
 
   description:
-    "Computer Science student at UCP focused on Generative AI, Agentic AI, Machine Learning, and Deep Learning. Skilled in Python, PyTorch, TensorFlow, Scikit-learn, LangChain, LangGraph, MCP, RAG, FastAPI, and Docker. Experienced in building AI-powered applications and passionate about exploring LLMs, AI agents, and modern AI engineering.",
+    "Computer Science student at UCP focused on Generative AI, Agentic AI, Machine Learning, and Deep Learning. Skilled in Python, PyTorch, Hugging Face , Unsloth , Scikit-learn, LangChain, LangGraph, MCP, RAG, FastAPI, Claude Code and Docker. Experienced in building AI-powered applications and passionate about exploring LLMs, AI agents, and modern AI engineering.",
 
   github: "https://github.com/ahmadnawaz01",
 
@@ -98,6 +103,7 @@ export const skills = [
       { name: "Matplotlib", image: matplot },
       { name: "Seaborn", image: seaborn },
       { name: "Scikit-learn", image: sklearn },
+      {name: "Hugging Face", image: huggingface },
       { name: "Keras", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg" },
       { name: "PyTorch", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" }
     ],
@@ -111,6 +117,8 @@ export const skills = [
       { name: "RAG", image: "https://cdn-icons-png.flaticon.com/512/8637/8637099.png" },
       { name: "ChromaDB", image: chromadb },
       { name: "Pinecone", image: pinecone },
+      {name: "Unsloth", image: unsloth },
+      { name: "LlamaFactory", image: llama },
       { name: "Ollama", image: ollama },
 
     ],
@@ -152,7 +160,8 @@ export const skills = [
       { name: "Postman", image: postmanimg },
       { name: "Google Colab", image: colab },
       { name: "Antigravity", image: antigravity },
-      { name: "Ollama", image: ollama }
+      { name: "Ollama", image: ollama },
+      {name:"Claude Code", image: claude}
     ],
   },
   {
@@ -219,6 +228,24 @@ export const education = [
   },
 ];
 export const projects = [
+  {
+  "id": 102,
+  "title": "Fine-Tuning Qwen2.5-1.5B with Unsloth: Medical AI Assistant (QLoRA + DPO)",
+  "date": "September 2026",
+  "description": "Fine-tuning Qwen2.5-1.5B with 4-bit QLoRA and Direct Preference Optimization (DPO). Trained custom adapters using Unsloth, Hugging Face TRL, and PyTorch across Supervised Fine-Tuning (SFT) on medical flashcards and DPO preference alignment. Integrated persistent checkpointing to Google Drive, merged 16-bit LoRA weights for high-throughput inference, and deployed the final aligned model to Hugging Face Hub.",
+  "image": med,
+  "tags": [
+    "Qwen2.5",
+    "QLoRA",
+    "DPO",
+    "Unsloth",
+    "Hugging Face",
+    "TRL"
+  ],
+  "category": "Gen / Agentic AI",
+  "github": "https://huggingface.co/ahmadnawaz21/Qwen2.5-1.5B-Medical-QLoRA-DPO",
+  "webapp": "https://huggingface.co/ahmadnawaz21/Qwen2.5-1.5B-Medical-QLoRA-DPO"
+},
   {
   "id": 899,
   "title": "(N8N) Aura - Autonomous Multi-Tool AI Personal Assistant",
