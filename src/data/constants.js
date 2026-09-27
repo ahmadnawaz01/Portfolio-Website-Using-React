@@ -51,7 +51,7 @@ import huggingface from "../images/huggingface.png"
 import unsloth from "../images/unsloth.png"
 import llama from "../images/llama.png"
 import claude from "../images/claude.png"
-
+import llamaf from "../images/llamaf.png"
 
 
 
@@ -228,6 +228,22 @@ export const education = [
   },
 ];
 export const projects = [
+  {
+  "id": 103,
+  "title": "Qwen2.5-1.5B Financial & Code Intelligence Engine (LLaMA-Factory 4-Bit QLoRA SFT + DPO)",
+  "date": "September 2026",
+  "description": "Architected a two-stage post-training pipeline using LLaMA-Factory to fine-tune and align Qwen2.5-1.5B-Instruct for financial reasoning and bug-free Python code execution. Registered multi-source dataset schemas in dataset_info.json, executed 4-bit QLoRA Supervised Fine-Tuning (SFT) across all linear projection modules, and applied Direct Preference Optimization (DPO) to reduce preference alignment loss from 1.35 down to 0.61. Merged LoRA adapters into full 16-bit base weights and deployed the standalone model to Hugging Face Hub.",
+  "image": llamaf,
+  "tags": [
+    "Qwen2.5",
+    "LLaMA-Factory",
+    "DPO",
+    "Hugging Face",
+  ],
+  "category": "Gen / Agentic AI",
+  "github": "https://github.com/ahmadnawaz01/Qwen2.5-1.5B-Financial-Code-Engine",
+  "webapp": "https://huggingface.co/ahmadnawaz21/Qwen2.5-1.5B-Financial-Code-Engine"
+},
   {
   "id": 102,
   "title": "Fine-Tuning Qwen2.5-1.5B with Unsloth: Medical AI Assistant (QLoRA + DPO)",
