@@ -241,7 +241,7 @@ export const projects = [
     "Hugging Face",
   ],
   "category": "Gen / Agentic AI",
-  "github": "https://github.com/ahmadnawaz01/Qwen2.5-1.5B-Financial-Code-Engine",
+  "github": "https://huggingface.co/ahmadnawaz21/Qwen2.5-1.5B-Financial-Code-Engine",
   "webapp": "https://huggingface.co/ahmadnawaz21/Qwen2.5-1.5B-Financial-Code-Engine"
 },
   {
